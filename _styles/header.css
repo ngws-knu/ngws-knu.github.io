@@ -35,7 +35,7 @@ header a {
 }
 
 .title-text {
-  display: flex;
+  display: block;
   justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
