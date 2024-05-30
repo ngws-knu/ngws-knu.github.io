@@ -47,7 +47,7 @@ header a {
 }
 
 .title-text {
-  display: block;
+  display: flex;
   justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
@@ -67,7 +67,7 @@ header a {
 }
 
 .nav-toggle {
-  display: none;
+  display: block;
   position: relative;
   width: 30px;
   height: 30px;
