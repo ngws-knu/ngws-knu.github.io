@@ -16,36 +16,20 @@ The Next Generation Web Security Laboratory identifies various security threats 
 Our research focuses on:
 </span>
 
-<ui>
-  <li>subject1</li>
-  <li>subject2</li>
-  <li>subject3</li>
-</ui>
+<ul>
+  {% for subject in site.data.subjects %}
+  <li>{{subject.title}}</li>
+  {% endfor %}
+</ul>
 
 {% include section.html %}
 
-## Subject 1
-
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
-
-{% include section.html %}
-
-## Subject 2
-
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
-
-{% include section.html %}
-
-## Subject 3
-
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
-
-{% include section.html %}
+{% for subject in site.subjects %}
+  <h2>{{subject.title}}</h2>
+  {% include subject.html title=subject.title image = subject.image content = subject.content %}
+  {% include section.html &}
+{% endfor %}
 
 ## All
 
-{% include search-box.html %}
 
-{% include search-info.html %}
-
-{% include list.html data="citations" component="citation" style="rich" %}
