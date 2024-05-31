@@ -18,16 +18,16 @@ Our research focuses on:
 
 <ul>
   {% for subject in site.data.subjects %}
-  <li>{{subject.title}}</li>
+    <li>{{ subject.title }}</li>
   {% endfor %}
 </ul>
 
 {% include section.html %}
 
-{% for subject in site.subjects %}
-  <h2>{{subject.title}}</h2>
-  {% include subject.html title=subject.title image = subject.image content = subject.content %}
-  {% include section.html &}
+{% for subject in site.data.subjects %}
+  <h2>{{ subject.title }}</h2>
+  {% include subject.html title=subject.title image=subject.image content=subject.content %}
+  {% include section.html %}
 {% endfor %}
 
 ## All
