@@ -31,7 +31,16 @@ Our research focuses on:
   {% include section.html %}
 {% endfor %}
 
-## All
+## More things
+if you're interesting about our subjects, you can see publications.
+{%
+  include button.html
+  link="projects"
+  text="Browse our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
 
 
 
