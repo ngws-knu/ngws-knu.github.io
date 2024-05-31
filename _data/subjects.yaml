@@ -1,10 +1,10 @@
 subjects:
+  - title: "Subject1"
+    image: images/photo.jpg
+    content: description of subject 1.
   - title: Subject1
     image: images/photo.jpg
-    contents: description of subject 1.
+    content: description of subject 2.
   - title: Subject1
     image: images/photo.jpg
-    contents: description of subject 2.
-  - title: Subject1
-    image: images/photo.jpg
-    contents: description of subject 3.
+    content: description of subject 3.
