@@ -9,11 +9,12 @@ nav:
 
 <div>
 The Next Generation Web Security Laboratory identifies various security threats emerging in the rapidly evolving digital environment and seeks innovative solutions to prevent them.
+
 </div>
 
-<div>
- Our research focuses on:
- </div>
+<span>
+Our research focuses on:
+</span>
 
 <ui>
   <li>subject1</li>
