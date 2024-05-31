@@ -1,6 +1,15 @@
-<div class="subject-box">
-    <img src="{{ include.image | relative_url }}" class="subject-image">
-    <div class="subject-content">
-        <p>{{include.content}}</p>
+{% assign css-address="subject.css" %}
+<link rel="stylesheet" href="{{ css-address}} | relative_url }}">
+
+<div class = "subject-containe"r>
+    <div class="subject-box">
+        <span class = "image">
+        <img src="{{ include.image | relative_url }}" class="subject-image">
+        </span>
+        <div class="subject-content">
+            <ul>
+            <li><p>{{include.content}}</p></li>
+            </ul>
+        </div>
     </div>
 </div>
