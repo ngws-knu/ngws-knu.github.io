@@ -24,7 +24,7 @@ Our research focuses on:
 
 ## All
 
-{% include subject.html test1 = site.data.subjects[0].test1 test3 = site.data.subjects[0].test11%}
+{% include subject.html test1=site.data.subjects[0].test1 test3=site.data.subjects[0].test11%}
 
 {% for test in site.data.subjects %}
   {% include subject.html test1=test.test1 test3=test.test11 %}
