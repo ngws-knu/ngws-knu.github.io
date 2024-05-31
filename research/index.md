@@ -8,8 +8,12 @@ nav:
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
 
 <div>
-The Next Generation Web Security Laboratory identifies various security threats emerging in the rapidly evolving digital environment and seeks innovative solutions to prevent them. Our research focuses on:
+The Next Generation Web Security Laboratory identifies various security threats emerging in the rapidly evolving digital environment and seeks innovative solutions to prevent them.
 </div>
+
+<div>
+ Our research focuses on:
+ </div>
 
 <ui>
   <li>subject1</li>
