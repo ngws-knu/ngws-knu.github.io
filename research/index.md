@@ -16,20 +16,23 @@ The Next Generation Web Security Laboratory identifies various security threats 
 Our research focuses on:
 </span>
 
+<ul>
+  {% for subject in site.data.subjects %}
+    <li>{{ subject.title }}</li>
+  {% endfor %}
+</ul>
 
 
 {% include section.html %}
 
-
+{% for subject in site.data.subjects %}
+  <h2>{{ subject.title }}</h2>
+  {% include subject.html title=subject.title image=subject.image content=subject.content %}
+  {% include section.html %}
+{% endfor %}
 
 ## All
 
-{% assign fsub=site.data.subjects[0] %}
 
-{% include subject.html test1=fsub.test1 test3=fsub.test11 %}
-
-{% for test in site.data.subjects %}
-  {% include subject.html test1=test.test1 test3=test.test11 %}
-{% endfor %}
 
 
