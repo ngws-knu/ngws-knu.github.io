@@ -24,7 +24,7 @@ Our research focuses on:
 
 ## All
 
-{% assign fsub=site.data.subject[0] %}
+{% assign fsub=site.data.subjects[0] %}
 
 {% include subject.html test1=fsub.test1 test3=fsub.test11 %}
 
