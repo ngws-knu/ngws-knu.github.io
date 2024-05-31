@@ -7,6 +7,12 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
 
+{% for subject in site.data.subjects %}
+  <p>{{ subject.title }}</p>
+  <p>{{ subject.image }}</p>
+  <p>{{ subject.content }}</p>
+{% endfor %}
+
 <div>
 The Next Generation Web Security Laboratory identifies various security threats emerging in the rapidly evolving digital environment and seeks innovative solutions to prevent them.
 
