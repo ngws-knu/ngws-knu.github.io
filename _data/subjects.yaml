@@ -1,10 +1,1 @@
-subjects:
-  - title: "Subject1"
-    image: "images/photo.jpg"
-    content: "description of subject 1."
-  - title: "Subject2"
-    image: "images/photo.jpg"
-    content: "description of subject 2."
-  - title: "Subject3"
-    image: "images/photo.jpg"
-    content: "description of subject 3."
+test: "testing1"

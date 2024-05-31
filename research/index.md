@@ -6,11 +6,6 @@ nav:
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
-{% for subject in site.data.subjects %}
-  <h2>{{ subject.title }}</h2>
-  {% include subject.html title=subject.title image=subject.image content=subject.content %}
-  {% include section.html %}
-{% endfor %}
 
 <div>
 The Next Generation Web Security Laboratory identifies various security threats emerging in the rapidly evolving digital environment and seeks innovative solutions to prevent them.
@@ -21,20 +16,14 @@ The Next Generation Web Security Laboratory identifies various security threats 
 Our research focuses on:
 </span>
 
-<ul>
-  {% for subject in site.data.subjects %}
-    <li>{{ subject.title }}</li>
-  {% endfor %}
-</ul>
+
 
 {% include section.html %}
 
-{% for subject in site.data.subjects %}
-  <h2>{{ subject.title }}</h2>
-  {% include subject.html title=subject.title image=subject.image content=subject.content %}
-  {% include section.html %}
-{% endfor %}
+
 
 ## All
+
+{% include subject.html test = site.data.subjects.test %}
 
 
