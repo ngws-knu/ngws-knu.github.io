@@ -1,9 +1,7 @@
 ---
 ---
 
-# ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.'s Website
-
-
+# We cover all things web security.
 
 {% include section.html %}
 
