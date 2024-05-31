@@ -6,7 +6,7 @@ nav:
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
-
+<h3>Debug output</h3>
 {% for subject in site.data.subjects %}
   <p>{{ subject.title }}</p>
   <p>{{ subject.image }}</p>
