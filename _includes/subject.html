@@ -1,5 +1,5 @@
 <div class="subject-box">
-    <img src="{{include.image}}" class="subject-image">
+    <img src="{{ include.image | relative_url }}" class="subject-image">
     <div class="subject-content">
         <p>{{include.content}}</p>
     </div>
