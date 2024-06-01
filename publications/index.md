@@ -11,7 +11,12 @@ nav:
 
 ## Highlighted
 
-{% include citation.html lookup="testing" style="rich" %}
+{% assign HL = site.data.publications | where: "title", "testing" | first %}
+
+{% include citation.html 
+  citation=HL
+  style="rich" 
+%}
 
 {% include section.html %}
 
