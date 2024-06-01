@@ -21,4 +21,4 @@ nav:
 
 {% include search-info.html %}
 
-{% include list.html data="sources_publications" component="citation" style="rich" %}
+{% include list.html data="sources-publications" component="citation" style="rich" %}
