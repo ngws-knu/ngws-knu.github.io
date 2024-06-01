@@ -29,7 +29,6 @@ Our research focuses on:
   <h2>{{ subject.title }}</h2>
   {% 
   include feature.html 
-  title=subject.title 
   image=subject.image 
   text=subject.content 
   flip=false
