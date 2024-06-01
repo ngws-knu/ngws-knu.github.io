@@ -13,8 +13,6 @@
   link: https://github.com/
   description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   repo: greenelab/lab-website-template
-  tags:
-    - resource
 
 - title: title3
   subtitle: a subtitle
@@ -22,9 +20,6 @@
   link: https://github.com/
   description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   repo: greenelab/lab-website-template
-  tags:
-    - resource
-    - publication
 
 - title: title4
   subtitle: a subtitle
@@ -32,8 +27,6 @@
   link: https://github.com/
   description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   repo: greenelab/lab-website-template
-  tags:
-    - software
 
 - title: title5
   subtitle: a subtitle
@@ -41,5 +34,3 @@
   link: https://github.com/
   description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   repo: greenelab/lab-website-template
-  tags:
-    - software
