@@ -68,7 +68,7 @@
   include feature.html
   image="images/photo.jpg"
   link="publications"
-  title="Our Team"
+  title="Our Publications"
   text=text
 %}
 
