@@ -38,12 +38,20 @@ Our research focuses on:
 {% endfor %}
 
 ## More things
-if you want more things about subjects, you can see our projects.
+if you want more things about subjects, you can see our projects or publications.
 
 {%
   include button.html
   link="projects"
   text="Browse our projects"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+%}
+
+{%
+  include button.html
+  link="projects"
+  text="Browse our publications"
   icon="fa-solid fa-arrow-right"
   flip=true
 %}
