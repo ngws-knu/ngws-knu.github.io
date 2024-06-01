@@ -33,7 +33,7 @@
 {%
   include button.html
   link="projects"
-  text="Browse our publications"
+  text="Browse our projects"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -45,7 +45,7 @@
   include feature.html
   image="images/photo.jpg"
   link="projects"
-  title="Our Publications"
+  title="Our Projects"
   flip=true
   style="bare"
   text=text
