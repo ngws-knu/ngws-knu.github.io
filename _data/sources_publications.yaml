@@ -1,0 +1,22 @@
+- title: "testing1"
+  authors:
+  - name 1
+  - name 2
+  publisher: PLOS Computational Biology
+  date: '2020-12-04'
+  link: https://doi.org/c7np
+  type: paper
+  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
+    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
+- title: "testing2"
+  authors:
+  - name 3
+  - name 4
+  publisher: Nucleic Acids Research
+  date: '2023-11-24'
+  link: https://doi.org/gs6kmr
+  orcid: 0000-0002-4655-3773
+  plugin: orcid.py
+  file: orcid.yaml
+  
