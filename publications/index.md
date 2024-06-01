@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Publications
 nav:
   order: 3
   tooltip: Musings and miscellany

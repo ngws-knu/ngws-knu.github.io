@@ -55,6 +55,27 @@
 
 {%
   include button.html
+  link="publications"
+  text="Browse our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/photo.jpg"
+  link="publications"
+  title="Our Team"
+  text=text
+%}
+
+{% capture text %}
+
+{%
+  include button.html
   link="team"
   text="Meet our team"
   icon="fa-solid fa-arrow-right"
