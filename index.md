@@ -90,5 +90,6 @@
   image="images/photo.jpg"
   link="team"
   title="Our Team"
+  flip=true
   text=text
 %}
