@@ -21,7 +21,7 @@ nav:
 
 {% include section.html %}
 
-## PHD
+## Ph.D
 {% include list.html data="members" component="portrait" filters="role: phd" %}
 
 {% include section.html %}

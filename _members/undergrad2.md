@@ -2,7 +2,7 @@
 name: name
 image: images/photo.jpg
 description: 
-role: ms
+role: undergrad
 links:
   email: sarah.johnson@gmail.com
   twitter: sarahjohnson
