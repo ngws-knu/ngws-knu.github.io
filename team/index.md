@@ -9,34 +9,18 @@ nav:
 
 {% include section.html %}
 
-## Professor
+{% assign roles = "pi,postdoc,phd,ms,undergrad" | split: "," %}
+{% assign role_titles = "Professor,Post-Doc,PHD,MS,Undergraduated" | split: "," %}
 
-{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% for role in roles %}
+  {% assign members_with_role = site.members | where: "role", role %}
+  {% if members_with_role.size > 0 %}
+    ## {{ role_titles[forloop.index0] }}
+    {% include list.html data="members_with_role" component="portrait" %}
+    {% include section.html %}
+  {% endif %}
+{% endfor %}
 
-{% include section.html %}
-
-## Post-Doc
-
-{% include list.html data="members" component="portrait" filters="role: postdoc" %}
-
-{% include section.html %}
-
-## Ph.D
-{% include list.html data="members" component="portrait" filters="role: phd" %}
-
-{% include section.html %}
-
-## MS
-
-{% include list.html data="members" component="portrait" filters="role: ms" %}
-
-{% include section.html %}
-
-## Undergraduated
-
-{% include list.html data="members" component="portrait" filters="role: undergrad" %}
-
-{% include section.html %}
 
 {% include section.html background="images/background.jpg" dark=true %}
 
