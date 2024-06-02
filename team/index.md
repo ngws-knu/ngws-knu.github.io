@@ -15,16 +15,24 @@ nav:
 
 {% include section.html %}
 
-<!-- ## Post-Doc
+{% comment %}
+
+ ## Post-Doc
 
 {% include list.html data="members" component="portrait" filters="role: postdoc" %}
 
-{% include section.html %} -->
+{% include section.html %} 
 
-<!-- ## Ph.D
+{% endcomment %}
+
+{% comment %} 
+
+## Ph.D
 {% include list.html data="members" component="portrait" filters="role: phd" %}
 
-{% include section.html %} -->
+{% include section.html %} 
+
+{% endcomment %}
 
 ## MS
 
