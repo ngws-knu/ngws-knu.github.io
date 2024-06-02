@@ -17,24 +17,24 @@ nav:
 
 ## Post-Doc
 
-{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% include list.html data="members" component="portrait" filters="role: postdoc" %}
 
 {% include section.html %}
 
 ## PHD
-{% include list.html data="members" component="portrait" filters="role: ^(?!pi$)" %}
+{% include list.html data="members" component="portrait" filters="role: phd" %}
 
 {% include section.html %}
 
 ## MS
 
-{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% include list.html data="members" component="portrait" filters="role: ms" %}
 
 {% include section.html %}
 
 ## Undergraduated
 
-{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% include list.html data="members" component="portrait" filters="role: undergrad" %}
 
 {% include section.html %}
 
