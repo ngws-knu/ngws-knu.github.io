@@ -16,7 +16,7 @@ nav:
   {% assign members_with_role = site.members | where: "role", role %}
   {% if members_with_role.size > 0 %}
     ## {{ role_titles[forloop.index0] }}
-    {% include list.html data="members" component="portrait" filter="role:{{role}}" %}
+    {% include list.html data="members" component="portrait" filters="role:{{role}}" %}
     {% include section.html %}
   {% endif %}
 {% endfor %}
