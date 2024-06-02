@@ -2,7 +2,7 @@
 title: Publications
 nav:
   order: 3
-  tooltip: Musings and miscellany
+  tooltip: Our publications
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Publications

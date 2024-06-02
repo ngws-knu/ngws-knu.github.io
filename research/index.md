@@ -2,7 +2,7 @@
 title: Research
 nav:
   order: 1
-  tooltip: Published works
+  tooltip: Major research
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
@@ -50,7 +50,7 @@ if you want more things about subjects, you can see our projects or publications
 
 {%
   include button.html
-  link="projects"
+  link="publications"
   text="Browse our publications"
   icon="fa-solid fa-arrow-right"
   flip=true
