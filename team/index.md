@@ -17,6 +17,8 @@ nav:
 
 ## Post-Doc
 
+{% include list.html data="members" component="portrait" filters="role: pi" %}
+
 {% include section.html %}
 
 ## PHD
@@ -26,11 +28,15 @@ nav:
 
 ## MS
 
+{% include list.html data="members" component="portrait" filters="role: pi" %}
+
 {% include section.html %}
 
 ## Undergraduated
 
+{% include list.html data="members" component="portrait" filters="role: pi" %}
 
+{% include section.html %}
 
 {% include section.html background="images/background.jpg" dark=true %}
 
