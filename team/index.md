@@ -13,15 +13,11 @@ nav:
 
 {% include list.html data="members" component="portrait" filters="role: pi" %}
 
-{% include section.html %}
-
 {% comment %}
 
  ## Post-Doc
 
 {% include list.html data="members" component="portrait" filters="role: postdoc" %}
-
-{% include section.html %} 
 
 {% endcomment %}
 
@@ -30,21 +26,15 @@ nav:
 ## Ph.D
 {% include list.html data="members" component="portrait" filters="role: phd" %}
 
-{% include section.html %} 
-
 {% endcomment %}
 
 ## MS
 
 {% include list.html data="members" component="portrait" filters="role: ms" %}
 
-{% include section.html %}
-
 ## Undergraduated
 
 {% include list.html data="members" component="portrait" filters="role: undergrad" %}
-
-{% include section.html %}
 
 
 {% include section.html background="images/background.jpg" dark=true %}
