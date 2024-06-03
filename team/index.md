@@ -45,11 +45,11 @@ nav:
 
 {% capture content %}
 
-{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
+{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
 
-{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
+{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
 
-{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
+{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
 
 {% endcapture %}
 
