@@ -45,10 +45,11 @@ nav:
 
 {% capture content %}
 
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include citation.html title="name" authors="graduated ##" publisher="where they got" date=" " id=" " style="rich" %}
+{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
+
+{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
+
+{% include card.html title="name" subtitle="graduated ##" description="where he got" style="small" %}
 
 {% endcapture %}
 
