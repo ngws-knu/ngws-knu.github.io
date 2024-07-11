@@ -64,6 +64,7 @@
   type: journal
   description:
   image: https://d3i71xaburhd42.cloudfront.net/99d92cd3c4a32f339e5368ef95514f7890aba78b/3-Figure1-1.png
+  id:
 - title: "CanvasMirror: Secure Integration of Third-Party Library in WebVR Environment"
   authors:
   - Jiyeon Lee
@@ -102,7 +103,7 @@
   type: journal
   description:
   image: https://ieeexplore.ieee.org/ielx7/71/7894348/7580608/graphical_abstract/tpds-gagraphic-2614669.jpg
-  id: doi:10.1109/TPDS.2016.2614669.
+  id: doi:10.1109/TPDS.2016.2614669
 - title: "Thread-level Priority Assignment in Global Multiprocessor Scheduling for DAG Tasks"
   authors:
   - Jiyeon Lee
@@ -146,4 +147,4 @@
   type: journal
   description:
   image: 
-  id: doi:10.1145/2632048.263607
+  id: doi:10.1145/2632048.2636077
