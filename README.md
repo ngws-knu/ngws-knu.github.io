@@ -13,4 +13,4 @@ _data/projects.yaml에 양식에 따라 적고 push하기, featured section에 �
 
 member 추가하는 방법:
 _members에 파일 만들어서 양식에 따라 적기
-alumni 인원 발생하면 team의 index.md 파일의 주석처리된 부분을 주석해제하고 양식에 따라 적어주기
+alumni 인원 발생하면 team의 index.md 파일의 주석처리된 부분을 주석해제하고({% comment %}와 {% endcomment %}) 양식에 따라 적어주기
