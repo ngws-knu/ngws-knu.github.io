@@ -36,7 +36,7 @@ nav:
 
 {% include list.html data="members" component="portrait" filters="role: undergrad" %}
 
-<!--
+{% comment %}
 
 {% include section.html background="images/background.jpg" dark=true %}
 
@@ -53,4 +53,4 @@ nav:
 
 {% include grid.html content=content %}
 
--->
+{% endcomment %}
