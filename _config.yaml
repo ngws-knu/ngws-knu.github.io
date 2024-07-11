@@ -8,12 +8,12 @@ proofer: false
 
 # site social media and other links
 links:
-  email: contact@ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab..com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
-  github: ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.
-  twitter: ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.
-  youtube: ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.
+  email: jiyeon@knu.ac.kr
+  #orcid: 0000-0001-8713-9213
+  google-scholar: https://scholar.google.co.kr/citations?hl=ko&user=2hqBN2IAAAAJ&view_op=list_works&sortby=pubdate
+  github: https://github.com/ngws-knu
+  #twitter: ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.
+  #youtube: ngws-knuDESCRIPTION=An engaging 1-3 sentence description of your lab.
 
 ### jekyll settings
 
