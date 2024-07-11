@@ -39,18 +39,16 @@ nav:
 
 {% include section.html background="images/background.jpg" dark=true %}
 
+<!--
 ## Alumni
 
 {% include section.html %}
 
 {% capture content %}
 
-{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
-
-{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
-
-{% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
+ {% include card.html image="images/photo.jpg" title="name" subtitle="graduated ##" description="where he got" style="small" %}
 
 {% endcapture %}
 
 {% include grid.html content=content %}
+-->
