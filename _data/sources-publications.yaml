@@ -1,4 +1,5 @@
-- title: "Data-Similarity-based IoT Node Selection for UAV Trajectory Optimization"
+- id: doi:10.1016/j.compeleceng.2023.108994
+  title: "Data-Similarity-based IoT Node Selection for UAV Trajectory Optimization"
   authors:
   - Haoran Mei
   - Muhammad Fawad Khan
@@ -12,8 +13,9 @@
   type: journal
   description: 
   image: https://ars.els-cdn.com/content/image/1-s2.0-S0045790623004184-gr1.jpg
-  id: doi:10.1016/j.compeleceng.2023.108994
-- title: "VRKeyLogger: Virtual Keystroke Inference Attack via Eavesdropping Controller Usage Pattern in WebVR"
+  
+- id: doi:10.1016/j.cose.2023.103461
+  title: "VRKeyLogger: Virtual Keystroke Inference Attack via Eavesdropping Controller Usage Pattern in WebVR"
   authors:
   - Jiyeon Lee
   - Hyosu Kim
@@ -24,8 +26,9 @@
   type: journal
   description:
   image: https://ars.els-cdn.com/content/image/1-s2.0-S0167404823003711-gr005.jpg
-  id: doi:10.1016/j.cose.2023.103461
-- title: "Spy in Your Eye: Spycam Attack via Open-sided Mobile VR Device"
+  
+- id: doi:10.1587/transinf.2022EDL8042
+  title: "Spy in Your Eye: Spycam Attack via Open-sided Mobile VR Device"
   authors:
   - Jiyeon Lee
   - Kilho Lee 
@@ -35,8 +38,9 @@
   type: journal
   description:
   image: 
-  id: doi:10.1587/transinf.2022EDL8042
-- title: "Exploiting Missing Value Patterns for a Backdoor Attack on Machine Learning Models of Electronic Health Records: Development and Validation Study"
+  
+- id: doi:10.2196/38440
+  title: "Exploiting Missing Value Patterns for a Backdoor Attack on Machine Learning Models of Electronic Health Records: Development and Validation Study"
   authors:
   - Byunggill Joe
   - Yonghyeon Park (co-first)
@@ -49,7 +53,7 @@
   type: journal
   description:
   image: https://asset.jmir.pub/assets/f43ff0e63d7296e526abd5f68ab5ec4d.png
-  id: doi:10.2196/38440
+  
 - title: "AdCube: WebVR Ad Fraud and Practical Confinement of Third-Party Ads"
   authors:
   - Hyunjoo Lee
@@ -65,7 +69,8 @@
   description:
   image: https://d3i71xaburhd42.cloudfront.net/99d92cd3c4a32f339e5368ef95514f7890aba78b/3-Figure1-1.png
   id:
-- title: "CanvasMirror: Secure Integration of Third-Party Library in WebVR Environment"
+- id: doi:10.1109/DSN-S50200.2020.00040
+  title: "CanvasMirror: Secure Integration of Third-Party Library in WebVR Environment"
   authors:
   - Jiyeon Lee
   publisher: Doctoral Forum of 50th IEEE/IFIP Conference on Dependable Systems and Networks (DSN)
@@ -74,8 +79,9 @@
   type: journal
   description:
   image: 
-  id: doi:10.1109/DSN-S50200.2020.00040
-- title: "Pride and Prejudice in Progressive Web Apps: Abusing Native App-like Features in Web Applications"
+  
+- id: doi:10.1145/3243734.3243867
+  title: "Pride and Prejudice in Progressive Web Apps: Abusing Native App-like Features in Web Applications"
   authors:
   - Jiyeon Lee
   - Hayeon Kim
@@ -88,8 +94,9 @@
   type: journal
   description:
   image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPUnaH99Ii1AmhlH9yxBhtPDkOnEEX3esLdg&s
-  id: doi:10.1145/3243734.3243867
-- title: "Global EDF Schedulability Analysis for Parallel Tasks on Multi-core Platforms"
+  
+- id: doi:10.1109/TPDS.2016.2614669
+  title: "Global EDF Schedulability Analysis for Parallel Tasks on Multi-core Platforms"
   authors:
   - Hoon Sung Chwa
   - Jinkyu Lee
@@ -103,8 +110,9 @@
   type: journal
   description:
   image: https://ieeexplore.ieee.org/ielx7/71/7894348/7580608/graphical_abstract/tpds-gagraphic-2614669.jpg
-  id: doi:10.1109/TPDS.2016.2614669
-- title: "Thread-level Priority Assignment in Global Multiprocessor Scheduling for DAG Tasks"
+  
+- id: doi:10.1016/j.jss.2015.12.004
+  title: "Thread-level Priority Assignment in Global Multiprocessor Scheduling for DAG Tasks"
   authors:
   - Jiyeon Lee
   - Hoon Sung Chwa
@@ -115,8 +123,9 @@
   type: journal
   description:
   image: https://ars.els-cdn.com/content/image/1-s2.0-S0164121215002800-gr1.jpg
-  id: doi:10.1016/j.jss.2015.12.004
-- title: "MC-Fluid: Fluid Model-based Mixed-Criticality Scheduling on Multiprocessors"
+  
+- id: doi:10.1109/RTSS.2014.32
+  title: "MC-Fluid: Fluid Model-based Mixed-Criticality Scheduling on Multiprocessors"
   authors:
   - Jaewoo Lee
   - Kieu-My Phan
@@ -131,8 +140,9 @@
   type: journal
   description:
   image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/7008943/7010360/7010473/7010473-fig-1-source-small.gif
-  id: doi:10.1109/RTSS.2014.32
-- title: "Mobile Maestro: Enabling Immersive Multi-Speaker Audio Applications on Commodity Mobile Devices"
+
+- id: doi:10.1145/2632048.2636077
+  title: "Mobile Maestro: Enabling Immersive Multi-Speaker Audio Applications on Commodity Mobile Devices"
   authors:
   - Hyosu Kim
   - SangJeong Lee
@@ -147,4 +157,4 @@
   type: journal
   description:
   image: 
-  id: doi:10.1145/2632048.2636077
+  
