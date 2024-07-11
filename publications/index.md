@@ -11,7 +11,7 @@ nav:
 
 ## Highlighted
 
-{% include citation.html lookup="testing1" style="rich" %}
+{% include citation.html lookup="VRKeyLogger" style="rich" %}
 
 {% include section.html %}
 
