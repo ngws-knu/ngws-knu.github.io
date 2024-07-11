@@ -36,10 +36,11 @@ nav:
 
 {% include list.html data="members" component="portrait" filters="role: undergrad" %}
 
+<!--
 
 {% include section.html background="images/background.jpg" dark=true %}
 
-<!--
+
 ## Alumni
 
 {% include section.html %}
@@ -51,4 +52,5 @@ nav:
 {% endcapture %}
 
 {% include grid.html content=content %}
+
 -->
