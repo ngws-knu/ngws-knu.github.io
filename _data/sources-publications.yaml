@@ -18,4 +18,17 @@
   link: https://doi.org/gs6kmr
   type: paper
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-  
+- title: "Data-Similarity-based IoT Node Selection for UAV Trajectory Optimization"
+  author:
+  - Haoran Mei
+  - Muhammad Fawad Khan
+  - Limei Peng
+  - Byungchul Tak
+  - Jiyeon Lee
+  - Pin-Han Ho
+  publisher: Computers and Electrical Engineering
+  data: '2023-11-18'
+  link: https://www.sciencedirect.com/science/article/pii/S0045790623004184?casa_token=PSVykapmY5MAAAAA:_FRSg3r-kKdQdjfB0osAULyHOXZrRozCTQFc9JL9mO-InqZvilZ18eDi1e1kT2qhjB5Ilfrc3e4
+  type: journal
+  description: 
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0045790623004184-gr1.jpg
