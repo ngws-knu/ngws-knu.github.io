@@ -68,7 +68,7 @@
   type: journal
   description:
   image: https://d3i71xaburhd42.cloudfront.net/99d92cd3c4a32f339e5368ef95514f7890aba78b/3-Figure1-1.png
-  
+
 - id: doi:10.1109/DSN-S50200.2020.00040
   title: "CanvasMirror: Secure Integration of Third-Party Library in WebVR Environment"
   authors:
@@ -157,4 +157,6 @@
   type: journal
   description:
   image: 
+
+  
   
