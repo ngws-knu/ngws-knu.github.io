@@ -1,5 +1,5 @@
 ---
-name: JongYoung Kang
+name: Jongyoung Kang
 image: images/photo.jpg
 description: 
 role: undergrad
