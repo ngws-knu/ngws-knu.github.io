@@ -1,11 +1,10 @@
 <template>
-  <!--<transition name="fade" appear>-->
   <div class="outer">
     <div class="timelabels">
       <span v-for="tlabel in timeLabels" :key="tlabel">{{ tlabel }}</span>
     </div>
     <div class="calendar">
-      <div class="day" v-for="(day, idx) in result" :key="day">
+      <div class="day" v-for="(day, idx) in result" :key="idx">
         <div class="daylabel">
           <span>{{ getDate(day[0]) }}</span>
           <p>{{ getDay(day[0]) }}</p>
@@ -14,7 +13,6 @@
       </div>
     </div>
   </div>
-  <!--</transition>-->
 </template>
 
 <script>
@@ -28,24 +26,18 @@ import { computed, toRefs } from "vue";
 export default {
   components: { HourBox },
   props: {
-    page: {
-      type: Number,
-      required: true,
-    },
+    page: { type: Number, required: true },
   },
   setup(props) {
     const route = useRoute();
     const store = useStore();
     const { page } = toRefs(props);
-
     store.dispatch(ActionTypes.loadAvailabilities, route.params.id);
-
     return {
-      availability: computed(() => store.getters.getAvailability),
       result: computed(() => store.getters.getSplitAvailabilities[page.value]),
+      timeLabels: computed(() => store.getters.getTimeLabels),
       getDate,
       getDay,
-      timeLabels: computed(() => store.getters.getTimeLabels),
     };
   },
 };
@@ -53,39 +45,48 @@ export default {
 
 <style lang="scss" scoped>
 .outer {
-  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-right: 10px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: unset;
+  scrollbar-gutter: stable both-edges;
+  padding-bottom:17px;
+  margin-left:27%;
+  &::-webkit-scrollbar-corner{ background:#f7f7f7; }
 }
-
 .calendar {
   display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 20px;
-  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  overflow: visible;
   background-color: #f7f7f7;
-  margin-right: 30px;
+  margin-right: 60px;
+  flex-shrink: 0;
 }
 
 .timelabels {
-  color: #686868;
-  padding-top: 80px;
-  padding-bottom: 25px;
-  display: flex;
-  align-self: stretch;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 15px;
-  span {
-    font-size: 0.8rem;
-  }
-
+ display: grid;
+  grid-auto-rows: 24px;
+  padding-top: 76px;
+  margin-right: 18px;
   text-align: right;
-  white-space: nowrap;
+
+  flex-shrink: 0;               
+  min-width: 50px;                
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 4px;
+    font-size: 0.8rem;
+
+    white-space: nowrap;     
+  }
 }
+
+.timelabels span:nth-child(4n + 1){ font-weight:600; }
+
 
 .hour-label {
   margin: 0px 5px;
@@ -96,7 +97,7 @@ export default {
   text-align: center;
 }
 .daylabel {
-  color: #686868;
+  color: #000000;
   top: -35px;
   text-align: center;
   align-self: center;
@@ -117,12 +118,15 @@ export default {
     text-transform: uppercase;
   }
 }
-.hours {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-}
 
+ .calendar .day:first-child .hours {
+   border-left: 2px solid #000;
+ }
+
+
+ .calendar .day:last-child .hours {
+   border-right: 2px solid #000;
+ }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -131,4 +135,5 @@ export default {
 .fade-leave-active {
   transition: all 3s linear;
 }
+
 </style>

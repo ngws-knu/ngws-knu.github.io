@@ -1,3 +1,4 @@
+const SLOT = 900;
 const generateAvailability = (start_date, end_date, start_time, end_time) => {
   //create array of unix time
   const user_time_array = create_user_time_array_hr(
@@ -16,34 +17,31 @@ const generateAvailability = (start_date, end_date, start_time, end_time) => {
   return user_time;
 };
 
-const create_user_time_array_hr = (
-  start_date,
-  end_date,
-  start_time,
-  end_time
-) => {
-  let user_time_array = [];
-  // Calculate out the value of start date and value of end date in seconds
-  const start_timestamp = new Date(start_date).getTime() / 1000;
-  const end_timestamp = new Date(end_date).getTime() / 1000;
-  const timestamp_difference = end_timestamp - start_timestamp;
-  // Calculate out the value of markers to skip unselected hour slots in a day
-  const before_start = secondsConverter(start_time);
-  const selected_time = secondsConverter(end_time) - before_start;
-  // Loop through every hour from start to end date, while skipping unwanted hours
-  for (let i = 0; i <= timestamp_difference / 86400; i++) {
-    let x = start_timestamp + 86400 * i;
-    let start_marker = x + before_start;
-    let skip_marker = start_marker + selected_time;
-    for (let token = start_marker; token <= skip_marker; token += 3600) {
-      user_time_array.push(token);
+const create_user_time_array_hr = (start_date, end_date, start_time, end_time) => {
+  const arr = [];
+
+  const dayStartUnix = new Date(start_date).getTime() / 1000; // 00:00:00
+  const dayEndUnix   = new Date(end_date).getTime()   / 1000;
+  const daysDiff     = (dayEndUnix - dayStartUnix) / 86400;   // 일수 차이
+
+  const startOffset = secondsConverter(start_time); // 09:00 → 32400
+  const endOffset   = secondsConverter(end_time);   // 17:00 → 61200
+
+  for (let i = 0; i <= daysDiff; i++) {
+    const base = dayStartUnix + 86400 * i;          // 해당 날짜 자정
+    const first = base + startOffset;               // 09:00
+    const last  = base + endOffset;            // 17:00
+
+    for (let ts = first; ts < last; ts += SLOT) {
+      arr.push(ts);                        
     }
   }
-  return user_time_array;
+  return arr;
 };
+
 //Convert "HH:MM" time format to seconds
 const secondsConverter = (time) => {
-  const hour = parseInt(time.slice(0, 2) * 3600);
+  const hour   = parseInt(time.slice(0, 2)) * 3600;
   const minute = parseInt(time.slice(3, 5)) * 60;
   //   const second = parseInt(time.slice(6, 8));
   const sum = hour + minute;
@@ -73,7 +71,11 @@ const retrievePage = function (
     const difference = endIndex - objectArray.length;
     return objectArray.slice(startIndex, startIndex + difference);
   }
-  return objectArray.slice(startIndex, endIndex);
+  return objectArray.slice(startIndex, Math.min(endIndex, objectArray.length));
 };
-
+const hrs_per_day = (start_time, end_time) => {
+  const s = secondsConverter(start_time);
+  const e = secondsConverter(end_time);
+  return Math.floor((e - s) / 900) + 1;
+};
 module.exports = { generateAvailability, IDGenerator, retrievePage };

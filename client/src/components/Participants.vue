@@ -1,6 +1,6 @@
 <template>
   <div class="participants drop-shadow">
-    <h3>Participants</h3>
+    <h3>Booked</h3>
     <div
       class="participant"
       v-for="participant in participants"
@@ -19,7 +19,10 @@
 export default {
   computed: {
     participants() {
-      return this.$store.getters.getParticipantList;
+      return this.$store.getters.getBookedUsers;
+    },
+    total() {
+      return this.$store.getters.getBookedCount;
     },
   },
   methods: {
@@ -39,6 +42,7 @@ export default {
 @import "../styles.scss";
 
 .participants {
+  margin-top: 80px;
   border-radius: 20px;
   background-color: white;
   width: 100%;

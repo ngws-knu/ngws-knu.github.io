@@ -23,12 +23,6 @@
     </div>
 
     <button @click="clearAll" class="drop-shadow">
-      <img
-        src="https://image.flaticon.com/icons/png/512/72/72205.png"
-        width="30"
-        alt=""
-        srcset=""
-      />
     </button>
   </div>
 
@@ -86,9 +80,9 @@ export default {
   cursor: not-allowed !important;
 }
 .event-details {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  margin-left: 40%;
   display: flex;
   width: 570px;
   align-items: center;
@@ -114,22 +108,36 @@ export default {
       .right {
         cursor: pointer;
         font-size: 2rem;
+
       }
     }
   }
 
   button {
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    border: 0;
-    background-color: white;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.1s ease-in-out;
+  padding: 0.8rem 2.5rem;
+  border-radius: 10px;
+  border: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+
+  margin-left: 30px;
+  margin-right: 50px;
+
+  font-size: 1.4rem;
+  text-transform: capitalize;
+
+  img.icon {
+    width: 18px;
+    height: 10px;
+    margin-right: 8px;
   }
+}
+
 }
 .content {
   display: flex;
@@ -145,4 +153,5 @@ export default {
 .fade-leave-active {
   opacity: 0;
 }
+
 </style>

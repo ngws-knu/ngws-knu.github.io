@@ -49,16 +49,20 @@ export const actions: ActionTree<State, State> & Actions = {
   async [ActionTypes.updateDatabase]({ state }) {
     await instance.put(`/${state.eventData._id}/update`, {
       availability: state.eventData.availability,
+      userId: state.userID,
     });
   },
-  async [ActionTypes.addUserName]({ commit }, { username, eventID }) {
+  async [ActionTypes.addUserName]({ commit, dispatch }, { username, password, eventID }) {
     // add user entry to database
     const response = await instance.put(`/${eventID}/adduser`, {
       user: username,
+      password,
     });
     // update local storage
     localStorage.setItem(eventID, response.data.id);
     commit(MutationType.AddUserName, { name: username, id: response.data.id });
+    const fresh = await instance.get(`/${eventID}`)
+    commit(MutationType.FetchAvailability, fresh.data)
   },
   [ActionTypes.updateHover]({ commit }, unixtime) {
     commit(MutationType.updateHover, unixtime);

@@ -1,6 +1,6 @@
 <template>
   <transition name="fade" appear>
-    <div class="event-deets  drop-shadow">
+    <div class="event-deets drop-shadow">
       <h3>Event Details</h3>
       <table class="detail-list">
         <tr>
@@ -27,7 +27,7 @@
   width: 100%;
   border-radius: 20px;
   background-color: white;
-  
+
   h3 {
     font-size: 20px;
     font-weight: bold;

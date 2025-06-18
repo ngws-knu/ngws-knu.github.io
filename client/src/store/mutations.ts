@@ -26,26 +26,44 @@ export type Mutations = {
 
 export const mutations: MutationTree<State> & Mutations = {
   [MutationType.FetchAvailability](state, data) {
-    state.eventData = data;
+    for (const key in data.availability) {
+    data.availability[key] = [...new Set(data.availability[key])];
+  }
+
+  const keys = Object.keys(data.availability).map(Number).sort((a,b)=>a-b);
+  const last = keys[keys.length-1];
+  const slot = 15*60;
+  const need =  (data.metaEnd - last) / slot - 1;
+  for(let i=1;i<=need;i++){
+    data.availability[last + i*slot] = [];
+  }
+
+  state.eventData = data;
+  const host = data.users.find((u:any)=>u.isHost);
+  state.hostID = host ? host.id : "";
   },
   [MutationType.AddAvailability](state, content) {
     const { unixtime } = content;
     const userID = state.userID;
-    if (state.eventData.availability[unixtime].indexOf(userID) === -1) {
-      state.eventData.availability[unixtime].push(userID);
-    }
+    const slot = state.eventData.availability[unixtime];
+    if (!slot.includes(userID)) slot.push(userID);  
   },
+
   [MutationType.RemoveAvailability](state, content) {
     const { unixtime } = content;
     const userID = state.userID;
     state.eventData.availability[unixtime] = state.eventData.availability[
       unixtime
-    ].filter((val: any) => {
-      return val !== userID;
-    });
+    ].filter(val => val !== userID);
   },
+
   [MutationType.AddUserName](state, user) {
-    state.eventData.users.push(user);
+    const dupe = state.eventData.users.find(u => u.name === user.name);
+    if (dupe) {
+      dupe.id = user.id;
+    } else {
+      state.eventData.users.push(user);
+    }
     state.userID = user.id;
   },
   [MutationType.RetrieveUserID](state, eventID) {
@@ -56,10 +74,10 @@ export const mutations: MutationTree<State> & Mutations = {
   },
   [MutationType.updateHover](state, unixtime) {
     if (unixtime === "MouseOut") {
-      state.currentHover = state.eventData.users.map((user) => user.id);
-    } else {
-      state.currentHover = state.eventData.availability[unixtime];
-    }
+    state.currentHover = [];
+  } else {
+    state.currentHover = state.eventData.availability[unixtime];
+  }
   },
   [MutationType.removeSelfAvailability](state) {
     for (const unixtime of Object.keys(state.eventData.availability)) {

@@ -8,10 +8,10 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/api': {
-        target: 'http://localhost:3000'
-      }
-    }
+      "/api": {
+        target: "http://localhost:3000",
+      },
+    },
   },
-  outputDir: path.resolve(__dirname, '../backend/public')
+  outputDir: path.resolve(__dirname, "../backend/public"),
 };

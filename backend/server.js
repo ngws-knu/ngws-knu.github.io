@@ -4,7 +4,8 @@ const router = require("./routes");
 var cors = require("cors");
 
 require("dotenv").config();
-connectDB(process.env.MONGO_DB_URI);
+console.log('[DEBUG] MONGO_PROD_URI =', process.env.MONGO_PROD_URI);
+connectDB(process.env.MONGO_PROD_URI);
 
 const app = express();
 

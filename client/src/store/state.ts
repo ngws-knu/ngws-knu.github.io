@@ -10,21 +10,25 @@ export interface EventData {
   createdAt: string;
   updatedAt: string;
   __v: number;
+  metaEnd: number;
 }
 
 export interface User {
   id: string;
   name: string;
+  isHost?: boolean;
 }
 
 export interface State {
   eventData: EventData;
   userID: string;
+  hostID: string;
   currentHover: string[];
 }
 
 export const state: State = {
   eventData: <EventData>{},
   userID: "",
+  hostID: "", 
   currentHover: [],
 };

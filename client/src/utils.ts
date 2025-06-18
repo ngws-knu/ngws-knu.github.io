@@ -36,11 +36,11 @@ function getDates(startDate: Date, stopDate: Date) {
   return dateArray;
 }
 function getHours(startTime: Date, endTime: Date) {
-  const timeArray = new Array();
+  const timeArray = new Array<Date>();
   let currentTime = startTime;
-  while (currentTime <= endTime) {
+  while (currentTime < endTime) {
     timeArray.push(new Date(currentTime));
-    currentTime = addHours(currentTime, 1);
+    currentTime = addMinutes(currentTime, 15);
   }
   return timeArray;
 }
@@ -66,7 +66,9 @@ const timeLabelGenerator = function (start_time: string, end_time: string) {
   const firstTime = dateParser(start_time);
   const lastTime = dateParser(end_time);
   const hours = getHours(firstTime, lastTime);
-  return hours.map(formatAMPM);
+  const labels = hours.map(formatAMPM);   
+  labels.push(formatAMPM(lastTime));
+  return labels;
 };
 /**
  * Takes in the array of the first day and produces the labels for the time and date.
@@ -108,6 +110,9 @@ const getDay = function (unixObject: number) {
   }
   const a = new Date(unixObject * 1000);
   return Intl.DateTimeFormat("en-US", { weekday: "long" }).format(a);
+};
+const addMinutes = (date: Date, mins: number): Date => {
+  return new Date(date.getTime() + mins * 60000);
 };
 
 export {

@@ -1,19 +1,18 @@
 <template>
-  <div class="container">
-    <div id="nav">
-      <div class="first-nav">
-        <router-link id="logo" to="/">When2meet</router-link>
-        <router-link to="/" class="underline">About When2meet</router-link>
-        <router-link to="/" class="underline">How it works</router-link>
-      </div>
-    </div>
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  </div>
+  <header class="site-header">
+    <router-link to="/" class="logo">
+      <img src="@/assets/knu-logo.png" alt="KNU">
+    </router-link>
+
+    <nav class="dept-nav">
+      <router-link to="/" class="dept">컴퓨터학부</router-link>
+      <router-link to="/" class="dept">IT대학</router-link>
+    </nav>
+  </header>
+  <router-view />   
 </template>
+
+
 
 <style lang="scss">
 * {
@@ -86,5 +85,28 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.02);
   }
+}
+</style>
+
+<style scoped>
+.site-header{
+  display:flex;
+  align-items:center;
+  gap:2rem;            
+  padding:24px 40px;
+}
+.logo img{
+  height: 60px;  
+  width:auto;
+}
+.dept-nav .dept{
+  font-size:2.25rem; 
+  font-weight:700; 
+  color:#222;
+  text-decoration:none;
+  margin-right:1rem;
+}
+.dept-nav .dept:hover{
+  text-decoration:underline;
 }
 </style>

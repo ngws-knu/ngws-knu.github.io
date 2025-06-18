@@ -106,7 +106,7 @@ export default {
       // validate blanks
       let formStatus = true;
       if (this.name.length === 0) {
-        this.error.name = "Event name cannot be empty";
+        this.error.name = "Event name cannot be empty!";
         formStatus = false;
       }
       if (!this.sdate) {
@@ -152,24 +152,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  width: 60%;
-  color: white;
-  margin: 20px auto;
-  background-color: #247ba0;
-  padding: 30px 30px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container{
+  width: 600px;
+  max-width: 90%;
+  margin: 40px auto;
+  color:#fff;
+  background:#c75858;
+  padding:30px;
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   button {
     padding: 10px 30px;
     margin-top: 30px;
-    color: #494949;
+    color: #ffffff;
     font-size: 20px;
     border-radius: 30px;
     border: 0;
-    background-color: #f6c467;
+    background-color: #000000;
     cursor: pointer;
     transition: all 0.2s ease;
     &:hover {
@@ -181,7 +182,7 @@ export default {
 
 form {
   p {
-    color: red;
+    color: rgb(0, 255, 213);
   }
   label {
     font-size: 1.5rem;

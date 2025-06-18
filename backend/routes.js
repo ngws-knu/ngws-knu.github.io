@@ -1,6 +1,8 @@
 const express = require("express");
 const user = require("./Models/Event.js");
 const { IDGenerator, generateAvailability } = require("./utils.js");
+const bcrypt = require("bcryptjs");
+const moment = require("moment");
 
 var router = express.Router()
 
@@ -34,6 +36,9 @@ router.post("/add", function (req, res) {
     start_time,
     end_time
   );
+  const endUnix = Math.floor(
+    new Date(`${end_date}T${end_time}:00`).getTime() / 1000
+  );
 
   const newUser = new user({
     event_name,
@@ -43,6 +48,7 @@ router.post("/add", function (req, res) {
     start_time,
     end_time,
     availability,
+    metaEnd: endUnix,
   });
   //Create users_time_object
   newUser
@@ -51,33 +57,58 @@ router.post("/add", function (req, res) {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.put("/:id/adduser", function (req, res) {
-  // Update a new user
-  const userName = req.body.user;
-  const ID = IDGenerator();
-  const userObject = { id: ID, name: userName };
-  user
-    .updateOne(
+router.put("/:id/adduser", async (req, res) => {
+  try {
+    const { user: userName, password } = req.body;
+    if (!userName || !password)
+      return res.status(400).json({ message: "name 과 password 모두 필요합니다." });
+
+    const eventDoc = await user.findById(req.params.id);
+    if (!eventDoc)
+      return res.status(404).json({ message: "event not found" });
+
+    const existing = eventDoc.users.find(u => u.name === userName);
+
+    if (existing) {
+      const ok = await bcrypt.compare(password, existing.passwordHash || "");
+      if (!ok)
+        return res.status(401).json({ message: "password incorrect" });
+      return res.json({ message: "welcome back", id: existing.id });
+    }
+
+    // 3) 새 사용자
+    const ID = IDGenerator();
+    const passwordHash = await bcrypt.hash(password, 10);
+    const isHost = eventDoc.users.length === 0;
+    const newUserObj = { id: ID, name: userName, passwordHash, isHost };
+
+    await user.updateOne(
       { _id: req.params.id },
-      { $push: { users: userObject } },
+      { $push: { users: newUserObj } },
       { runValidators: true }
-    )
-    .then(() => res.json({ message: "Successfully added user", id: ID }))
-    .catch((err) => console.log(err));
+    );
+
+    return res.json({ message: "user created", id: ID });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "server error" });
+  }
 });
 
-router.put("/:id/update", function (req, res) {
-  // update availabilities of user
-  const avail = req.body.availability;
-  user
-    .updateOne(
-      { _id: req.params.id },
-      { availability: avail },
-      { runValidators: true }
-    )
-    .then(() =>
-      res.json({ message: "Successfully updated availability of user" })
-    );
+
+router.put("/:id/update", async (req, res) => {
+
+  const { availability, userId } = req.body;
+
+  const eventDoc = await user.findById(req.params.id);
+  if (!eventDoc) return res.status(404).json({ message: "event not found" });
+  if (!eventDoc.users.some(u => u.id === userId))
+    return res.status(403).json({ message: "forbidden" });
+
+
+  eventDoc.availability = availability;
+  await eventDoc.save();
+  res.json({ message: "availability saved" });
 });
 
 module.exports = router;

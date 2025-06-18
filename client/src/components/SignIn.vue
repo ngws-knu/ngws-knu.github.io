@@ -9,10 +9,10 @@
               <label for="name">Name: </label>
               <input type="text" name="name" v-model="name" />
             </div>
-            <!--<div class="row">
-          <label for="password">Password (optional):</label>
-          <input type="password" name="password" v-model="password" />
-        </div>-->
+            <div class="row">
+              <label for="password">Password: </label>
+              <input type="password" name="password" v-model="password" />
+            </div>
             <div class="row">
               <button>Sign In</button>
             </div>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { ref } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 import { ActionTypes } from "../store/actions";
@@ -43,6 +43,7 @@ export default {
     const handleSubmit = () => {
       store.dispatch(ActionTypes.addUserName, {
         username: name.value,
+        password: password.value,
         eventID: route.params.id,
       });
       name.value = "";
@@ -119,8 +120,6 @@ h1 {
 .modal-leave-active {
   transition: all 0.4s ease-in;
 }
-
-
 
 .bounce-enter-active {
   animation: bounce-in 1s;

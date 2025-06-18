@@ -1,125 +1,140 @@
 <template>
-  <div
-    class="hour"
-    :style="styleBinding(availability[hour])"
-    :class="[
-      idx === 0 ? 'first' : '',
-      availability[hour].includes(userID) ? 'selected' : '',
-    ]"
-    v-for="hour in day"
-    :key="hour"
-    @mousedown="clickHandler"
-    @mousemove.prevent="dragHandler"
-    @mouseover="hoverHandler"
-    @mouseout="mouseoutHandler"
-    :id="hour"
-  ></div>
+  <div class="hours">
+    <div
+      v-for="hour in day"
+      :key="hour"
+      :id="hour"
+      class="hour"
+      :class="[
+        idx === 0 ? 'first-col' : '',
+        availability[hour].includes(hostID)
+          ? 'host-lock'
+          : availability[hour].includes(userID)
+              ? 'selected'
+              : '',
+        availability[hour].length >= 3 ? 'full' : '',
+        !loggedIn ? 'disabled' : ''
+      ]"
+      :style="styleBinding(availability[hour])"
+      @mousedown="clickHandler"
+      @mousemove.prevent="dragHandler"
+      @mouseenter="hoverIn"
+      @mouseleave="hoverOut"
+    />
+  </div>
 </template>
 
-<script>
-import { useStore } from "vuex";
+<script lang="ts">
 import { computed } from "vue";
+import { useStore } from "vuex";
 import { useRoute } from "vue-router";
-import { ActionTypes } from "../store/actions";
+import { ActionTypes } from "@/store/actions";
+import { MutationType } from "@/store/mutations";
 
 export default {
   props: { day: Array, idx: Number },
   setup() {
-    let action = "ADD";
-    const store = useStore();
-    const route = useRoute();
-    const userID = store.state.userID;
+    const store  = useStore();
+    const route  = useRoute();
 
-    const hoverHandler = (event) => {
-      store.dispatch(ActionTypes.updateHover, event.target.id);
-    };
+    const userID   = computed(() => store.state.userID);
+    const hostID   = computed(() => store.getters.getHostID);
+    const loggedIn = computed(() => !!store.state.userID);
 
-    const mouseoutHandler = () => {
-      store.dispatch(ActionTypes.updateHover, "MouseOut");
-    };
+    let dragAction: "ADD" | "REMOVE" = "ADD";
 
-    const clickHandler = (event) => {
-      event.target.classList.value.includes("selected")
-        ? (action = "REMOVE")
-        : (action = "ADD");
-      UPDATE_AVAILABILITY(action, event);
-    };
+    /* 공통 처리 --------------------------------- */
+    const update = (act: "ADD" | "REMOVE", el: HTMLElement) => {
+      const unixtime = el.id;
+      const slot     = store.getters.getAvailability[unixtime];
 
-    const dragHandler = (event) => {
-      let mouseClickedDown = event.buttons === 1;
-      if (mouseClickedDown) {
-        UPDATE_AVAILABILITY(action, event);
+      // Host 칸 접근 차단
+      if (slot.includes(hostID.value) && userID.value !== hostID.value) {
+        alert("해당 시간대는 예약할 수 없습니다!");
+        return;
       }
-    };
-
-    const UPDATE_AVAILABILITY = (action, event) => {
-      let unixtime = event.target.id;
-      if (action === "ADD") {
-        event.target.classList.add("selected");
-        store.dispatch(ActionTypes.addEvent, {
-          unixtime,
-          eventID: route.params.id,
-        });
-      } else if (action === "REMOVE") {
-        event.target.classList.remove("selected");
-        store.dispatch(ActionTypes.removeEvent, {
-          unixtime,
-          eventID: route.params.id,
-        });
+      // 정원 3명 초과
+      if (act === "ADD" && slot.length >= 3 && !slot.includes(hostID.value)) {
+        alert("이미 예약이 꽉 찼습니다!");
+        return;
       }
+
+      if (act === "ADD") el.classList.add("selected");
+      else               el.classList.remove("selected");
+
+      const type =
+        act === "ADD" ? ActionTypes.addEvent : ActionTypes.removeEvent;
+      store.dispatch(type, { unixtime, eventID: route.params.id });
       store.dispatch(ActionTypes.updateDatabase);
     };
 
-    const styleBinding = (arr) => {
-      const degree = arr.length;
-      return {
-        "background-color": `hsl(157, 59%, ${100 - degree * 10}%)`,
-        border:
-          degree === 0 ? "" : `solid 0.1px hsl(157, 59%, ${90 - degree * 10}%)`,
-        "border-top": "none",
-        "border-left": "none",
-      };
+    const clickHandler = (e: MouseEvent) => {
+      if (!loggedIn.value) return;
+      const el    = e.target as HTMLElement;
+      const slot  = store.getters.getAvailability[el.id]; 
+      const have  = slot.includes(userID.value);           
+
+      dragAction = have ? "REMOVE" : "ADD";          
+      update(dragAction, el);
     };
-    const styleBindingUser = (arr) => {
-      const users = arr.filter((id) => id === store.state.userID);
-      const degree = users.length;
-      return {
-        "background-color": `hsl(157, 59%, ${100 - degree * 10}%)`,
-        border:
-          degree === 0 ? "" : `solid 0.1px hsl(157, 59%, ${90 - degree * 10}%)`,
-        "border-top": "none",
-        "border-left": "none",
-      };
+    const dragHandler = (e: MouseEvent) => {
+      if (loggedIn.value && e.buttons === 1)
+        update(dragAction, e.target as HTMLElement);
     };
 
+    const styleBinding = (arr: string[]) => ({
+      backgroundColor: `hsl(157,59%,${100 - arr.length * 10}%)`,
+    });
+    const hoverIn  = (e: MouseEvent) =>
+      store.commit(MutationType.updateHover, (e.target as HTMLElement).id);
+    const hoverOut = () =>
+      store.commit(MutationType.updateHover, "MouseOut");
     return {
-      dragHandler,
-      styleBindingUser,
-      clickHandler,
-      hoverHandler,
-      mouseoutHandler,
-      styleBinding,
       availability: computed(() => store.getters.getAvailability),
       userID,
+      hostID,
+      loggedIn,
+      clickHandler,
+      dragHandler,
+      hoverIn,
+      hoverOut,
+      styleBinding,
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.hour {
-  width: 7rem;
-  height: 36px;
-  border: solid 0.1px rgb(230, 230, 230);
-  background-color: white;
-  border-top: none;
-  border-left: none;
-  &:nth-child(2) {
-    border-top: solid 0.1px rgb(230, 230, 230) !important;
-  }
+<style scoped>
+/* ───────── 기본 그리드/라인 ───────── */
+.hours { display:grid; grid-auto-rows:24px;
+         border-right:2px solid #000; border-bottom:none; }
+.hour  { width:7rem; height:24px; background:#fff; }
+.hour:nth-child(4n+1){ border-top:2px solid #000; }
+.hour:nth-child(4n+3){ border-top:1px solid #000; }
+.hours .hour:first-child{ border-left:none; }
+.hour:first-child { border-top:2px solid #000; }
+.hour:last-child  { border-bottom:2px solid #000; }
+.first-col{ border-left:none !important; }
+
+/* ───────── 상태별 스타일 ───────── */
+/* 로그인 안 한 사람 */
+.disabled { pointer-events:none; opacity:.4; }
+
+/* 정원 초과(3명 이상) */
+.full, .host-lock {          /* host-lock = Author가 찍은 칸 */
+  cursor:not-allowed;
+  background:#d0d0d0 !important;
 }
 
-.first {
-  border-left: solid 0.1px rgb(230, 230, 230) !important;
+/* ───────── 빨간 X (Author 전용) ───────── */
+.host-lock{
+  position:relative;
+}
+.host-lock::after{
+  content:"✕";
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font:700 18px/1 sans-serif; color:#e00;
+  pointer-events:none;    /* X 자체는 클릭 무시 */
 }
 </style>

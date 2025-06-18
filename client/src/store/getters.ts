@@ -1,97 +1,85 @@
 import { GetterTree } from "vuex";
 import { EventData, State, User } from "./state";
-import { isEmpty, isNil, chunk } from "lodash";
+import { isEmpty, chunk } from "lodash";
 import { timeLabelGenerator, getLabelTop, getMonths } from "../utils";
 
 export type Getters = {
-  usernameExist(state: State): boolean;
-  getUserID(state: State): null | string;
-  getEventData(state: State): EventData;
-  getAvailability(state: State): { [key: string]: string[] };
-  getSplitAvailabilities(state: State, getters: Getters): string[][][] | void;
-  getEventName(state: State): string;
-  getTimeLabels(state: State): string[];
-  getTopLabel(state: State): string;
-  getPageNumbers(state: State, getters: Getters): number;
-  getParticipantList(state: State): User[];
-  getEventDetails(
-    state: State
-  ): { created: string; author: string; participants: number };
+  usernameExist      (state: State): boolean;
+  getUserID          (state: State): string | null;
+  getHostID          (state: State): string;
+  getEventData       (state: State): EventData;
+  getAvailability    (state: State): { [k: string]: string[] };
+  getSplitAvailabilities(state: State, g: Getters): string[][][];
+  getEventName       (state: State): string;
+  getTimeLabels      (state: State): string[];
+  getTopLabel        (state: State): string;
+  getPageNumbers     (state: State, g: Getters): number;
+  getBookedUsers     (state: State, g: Getters): User[];       // ← NEW
+  getBookedCount     (state: State, g: Getters): number;       // ← NEW
+  getEventDetails    (state: State, g: Getters):
+                     { created: string; author: string; participants: number };
 };
 
 export const getters: GetterTree<State, State> & Getters = {
-  usernameExist(state) {
-    return state.userID.length > 0;
-  },
-  getUserID(state) {
-    return state.userID;
-  },
-  getEventData(state) {
-    return state.eventData;
-  },
-  getAvailability(state) {
-    return state.eventData.availability;
-  },
-  getSplitAvailabilities(state, getters) {
-    // split availability data into a 3d array.
-    // dimension 1: pages
-    // dimension 2: days (6 days per page)
-    // dimension 3: hour (`numofTimings` hours per day)
+  /* 기본 -------------------------------------------------------------- */
+  usernameExist: s => !!s.userID,
+  getUserID    : s => s.userID,
+  getHostID    : s => s.hostID,
+  getEventData : s => s.eventData,
+  getAvailability: s => s.eventData.availability,
 
-    if (isEmpty(state.eventData)) {
-      return [[[]]];
-    }
-    const numofTimings = getters.getTimeLabels.length;
-    const arr = Object.keys(state.eventData.availability);
-    const days = chunk(arr, numofTimings);
-    const NUMBER_OF_DAYS_PER_PAGE = 6;
-    return chunk(days, NUMBER_OF_DAYS_PER_PAGE);
+  /* 1-A  달력 3D 배열 -------------------------------------------------- */
+  getSplitAvailabilities(state) {
+    if (isEmpty(state.eventData)) return [[[]]];
+
+    const sec = (t: string) => +t.slice(0, 2) * 3600 + +t.slice(3) * 60;
+    const slotsPerDay =
+      Math.floor((sec(state.eventData.end_time) -
+                  sec(state.eventData.start_time)) / 900);
+
+    const keys  = Object.keys(state.eventData.availability)
+                    .map(Number).sort((a, b) => a - b)
+                    .map(String);
+    const days  = chunk(keys, slotsPerDay);
+    return chunk(days, 6);                 // 6 일 한 페이지
+  },
+  getPageNumbers: (_s, g) => g.getSplitAvailabilities.length - 1,
+
+  /* 1-B  각종 라벨 ---------------------------------------------------- */
+  getEventName : s =>
+    isEmpty(s.eventData) ? "" : s.eventData.event_name,
+
+  getTimeLabels(s) {
+    if (isEmpty(s.eventData)) return [];
+    return timeLabelGenerator(s.eventData.start_time, s.eventData.end_time);
+  },
+  getTopLabel(s) {
+    if (isEmpty(s.eventData)) return "";
+    return getLabelTop(s.eventData.start_date, s.eventData.end_date);
   },
 
-  getPageNumbers(state, getters) {
-    return getters.getSplitAvailabilities.length - 1;
+  /* 2-A  Host(Author)를 뺀 예약자 목록/숫자 ---------------------------- */
+  getBookedUsers(state) {
+    if (isEmpty(state.eventData)) return [];
+    const booked = new Set<string>();
+    Object.values(state.eventData.availability)
+      .forEach(arr => arr.forEach(id => booked.add(id)));
+    booked.delete(state.hostID);                 // Host 제외
+    return state.eventData.users.filter(u => booked.has(u.id));
   },
+  getBookedCount: (_s, g) => g.getBookedUsers.length,
 
-  getEventName(state) {
-    return state.eventData.event_name;
-  },
-  getTimeLabels(state) {
-    if (isEmpty(state.eventData)) {
-      return [];
-    }
-    return timeLabelGenerator(
-      state.eventData.start_time,
-      state.eventData.end_time
-    );
-  },
-  getTopLabel(state) {
-    if (isEmpty(state.eventData)) {
-      return "";
-    }
-    return getLabelTop(state.eventData.start_date, state.eventData.end_date);
-  },
-  getParticipantList(state) {
-    if (isEmpty(state.eventData)) {
-      return [];
-    }
-    return state.eventData.users;
-  },
-  getEventDetails(state) {
-    if (isEmpty(state.eventData)) {
-      return { created: "", author: "", participants: 0 };
-    }
-    const date = new Date(state.eventData.createdAt);
-    const monthNames = getMonths();
-    const created = `${date.getDate()} ${
-      monthNames[date.getMonth()]
-    } ${date.getFullYear()}`;
-    const participants = state.eventData.users.length;
-    let author;
-    if (participants === 0) {
-      author = "unknown";
-    } else {
-      author = state.eventData.users[0].name;
-    }
-    return { created, author, participants };
-  },
+  /* 2-B  EventDetails 카드 ------------------------------------------ */
+  getEventDetails(state, getters) {
+  if (isEmpty(state.eventData))
+    return { created: "", author: "", participants: 0 };
+  const date   = new Date(state.eventData.createdAt);
+  const month  = getMonths()[date.getMonth()];
+  const created = `${date.getDate()} ${month} ${date.getFullYear()}`;
+  const author =
+    state.eventData.users.find(u => u.isHost)?.name ?? "unknown";
+  const participants = getters.getBookedUsers.length;
+
+  return { created, author, participants };
+},
 };
