@@ -33,6 +33,7 @@ title: "Team"
 <p class="person-role">B.S.-M.S. Integrated | Fall 2025</p>
 <p class="person-email">rede02@knu.ac.kr</p>
 <p class="person-detail">🎓 B.S. CSE @ KNU</p>
+<p class="person-detail">🏆 Magna cum laude</p>
 <p class="person-detail">🧭 Lab Leader</p>
 </div>
 </article>
