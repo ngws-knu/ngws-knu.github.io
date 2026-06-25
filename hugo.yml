@@ -1,0 +1,66 @@
+baseURL: "https://ngws-knu.github.io/"
+locale: "ko-KR"
+title: "Next-Generation Web Security Lab"
+theme: "PaperMod"
+
+params:
+  defaultTheme: light
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+  label:
+    text: "NGWS@KNU"
+
+  assets:
+    favicon: "/images/favicon.png"
+    favicon16x16: "/images/favicon.png"
+    favicon32x32: "/images/favicon.png"
+    apple_touch_icon: "/images/favicon.png"
+    faviconVersion: "20260621-2045"
+
+  homeInfoParams:
+    Title: "What NGWS Pursues"
+    Content: "We build principled security foundations for a web where humans, AI agents, browsers, and online services increasingly act together. Our lab values growing together through research and sharing good ideas, good systems, and good impact to shape a safer, more trustworthy world."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/ngws-knu"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=2hqBN2IAAAAJ&hl=en"
+    - name: email
+      url: "mailto:jiyeon@knu.ac.kr"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 20
+    - identifier: team
+      name: Team
+      url: /team/
+      weight: 30
+    - identifier: publications
+      name: Publication
+      url: /publications/
+      weight: 40
+    - identifier: news
+      name: News
+      url: /news/
+      weight: 50
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 60
