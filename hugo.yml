@@ -3,6 +3,10 @@ locale: "ko-KR"
 title: "Next-Generation Web Security Lab"
 theme: "PaperMod"
 
+services:
+  googleAnalytics:
+    ID: "G-2EBM53VZPK"
+
 params:
   defaultTheme: light
   ShowReadingTime: true
