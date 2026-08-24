@@ -7,6 +7,19 @@ date: 2026-06-04T19:02:02+09:00
 
 ### 2026
 
+
+- <span class="pub-badge q1">Q1</span> **Pinching Antenna Relaying Systems with Hardware Impairments**  
+   Yunhao Ding, Wei Duan, Guoping Lu, Jiyeon Lee, Limei Peng, Pin-Han Ho,  
+   To appear in *IEEE Internet of Things Journal*, August 2026.
+
+- <span class="pub-badge q1">Q1</span> **Low-Complexity Scheme for HRIS Construction Optimization under Overall Power Constraint**  
+   Wei Duan, Wenjun Jiao, Guoan Zhang, Jiyeon Lee, Limei Peng, Pin-Han Ho  
+   To appear in *IEEE Transactions on Vehicular Technology*, August 2026.
+
+- <span class="pub-badge q1">Q1</span> **Beyond Time-Expanded Graphs: Novel Continuous-Time Graphs for SAGINs**  
+   Ke Zhao, Limei Peng, Jiyeon Lee, and Hsiao-Chun Wu  
+   *IEEE Transactions on Communications*, July 2026.
+
 - <span class="pub-badge q1">Q1</span> **Optimizing Consumer Task Offloading in Dynamic SAGINs with Collaborative LLM Agents**  
    Ke Zhao, Jiang Mo, Limei Peng, Jiyeon Lee  
    *IEEE Transactions on Consumer Electronics*, June 2026.
