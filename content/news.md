@@ -10,10 +10,11 @@ title: "News"
 <section class="news-year">
 <h2>2026</h2>
 <div class="news-list">
+<article class="news-event"><div class="news-date">July</div><div class="news-body"><h3>☕ We enjoyed a fika together. <a class="news-photo-tag" href="#photo-fika" data-photo-target="photo-fika">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>🚀 We launched the new NGWS website.</h3></div></article>
 <article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>🌱 Junwoo joined NGWS. Welcome aboard!</h3></div></article>
 <article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>📄 Our paper was accepted to <em>IEEE Transactions on Consumer Electronics</em>.</h3></div></article>
-<article class="news-event"><div class="news-date">Feb</div><div class="news-body"><h3>💼 NGWS was selected for a More Action Individual Stepping-stone Project.</h3></div></article>
+<article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>💼 NGWS was selected for a More Action Individual Stepping-stone Project.</h3></div></article>
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>🎓 Yeonhak successfully defended his master's thesis.</h3></div></article>
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>🎤 Dongyoon presented at ASK 2026 in Gangwon-do. <a class="news-photo-tag" href="#photo-ask26" data-photo-target="photo-ask26">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">Apr</div><div class="news-body"><h3>📄 Our paper was accepted to <em>Transactions of the Korea Information Processing Society</em>.</h3></div></article>
@@ -76,6 +77,7 @@ title: "News"
 
 <aside class="news-moments" aria-label="Lab moments">
 <h2>Lab Moments</h2>
+<figure id="photo-fika"><img src="/images/news/260731-fika.png" alt="NGWS fika gathering"></figure>
 <figure id="photo-ask26"><img src="/images/news/260522-ask26.png" alt="Dongyoon presenting at ASK 2026"></figure>
 <figure class="is-portrait"><img src="/images/news/260515-teachers-day.jpg" alt="NGWS Teacher's Day gathering"></figure>
 <figure id="photo-lab-logo"><img src="/images/news/260430-lab-logo.jpg" alt="NGWS lab logo moment"></figure>
