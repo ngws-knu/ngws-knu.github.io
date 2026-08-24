@@ -33,7 +33,8 @@ title: "Team"
 <p class="person-role">B.S.-M.S. Integrated | Fall 2025</p>
 <p class="person-email">rede02@knu.ac.kr</p>
 <p class="person-detail">🎓 B.S. CSE @ KNU</p>
-<p class="person-detail">🏆 Magna cum laude</p>
+<p class="person-detail">(Magna cum laude)</p>
+<p class="person-detail">🏆 G-KNU Scholar</p>
 <p class="person-detail">🧭 Lab Leader</p>
 </div>
 </article>
@@ -69,8 +70,8 @@ title: "Team"
 <p class="person-heading"><a class="person-name" href="#">Dongyoon Lee</a> <a class="person-link" href="#" aria-label="Dongyoon Lee homepage">🔗</a></p>
 <p class="person-role">B.S.-M.S. Integrated | Spring 2026</p>
 <p class="person-email">sub09065@gmail.com</p>
-<p class="person-detail">🎓 B.S. CSE @ KNU</p>
-<p class="person-detail">🔬 Undergraduate Research Program</p>
+<p class="person-detail">🎓 CSE @ KNU</p>
+<p class="person-detail">🔬 URP</p>
 </div>
 </article>
 <article class="person-card">
@@ -80,13 +81,13 @@ title: "Team"
 <p class="person-role">Research Intern | Spring 2026</p>
 <p class="person-email">studyhyeon1004@gmail.com</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
-<p class="person-detail">🔬 Undergraduate Research Program</p>
+<p class="person-detail">🔬 URP</p>
 </div>
 </article>
 <article class="person-card">
 <img src="/images/team/hyunjoong-profile.jpg" alt="Hyunjoong Kim profile photo">
 <div class="person-info">
-<p class="person-heading"><a class="person-name" href="#">Hyunjoong Kim</a> <a class="person-link" href="#" aria-label="Hyunjoong Kim homepage">🔗</a></p>
+<p class="person-heading"><a class="person-name" href="#">Hyunjung Kim</a> <a class="person-link" href="#" aria-label="Hyunjoong Kim homepage">🔗</a></p>
 <p class="person-role">Research Intern | Spring 2026</p>
 <p class="person-email">djh05099@gmail.com</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
