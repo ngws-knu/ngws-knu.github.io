@@ -92,7 +92,7 @@ date: 2026-06-04T19:02:02+09:00
 
 ## Miscellaneous
 
-### Domestic Papers and Demos
+### Domestic and Technical Papers
 
 - **A Study on Security Vulnerability Analysis and Attack Practice of GraphQL API**  
    Dongyoon Lee, Jihwan Park, Yeonwoo Sea, Hyunjoong Kim, Jiyeon Lee  
