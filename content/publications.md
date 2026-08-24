@@ -69,6 +69,10 @@ date: 2026-06-04T19:02:02+09:00
     Jaewoo Lee, Kieu-My Phan, Xiaozhe Gu, Jiyeon Lee, Arvind Easwaran, Insik Shin, Insup Lee  
     Proceedings of the 35th IEEE Real-Time Systems Symposium (RTSS), Rome, Italy, December 2014.
 
+- **Real-time Audio Coordination Framework for Immersive Sound Reproduction**  
+   Hyosu Kim, Jiyeon Lee, Hwidong Bae, Insik Shin  
+   Demo session of the 35th IEEE Real-Time Systems Symposium (RTSS@Work), Rome, Italy, December 2014.
+
 - <span class="pub-badge bkcs">BKCS</span> **Mobile Maestro: Enabling Immersive Multi-Speaker Audio Applications on Commodity Mobile Devices**  
     Hyosu Kim, SangJeong Lee, Jung-Woo Choi, Hwidong Bae, Jiyeon Lee, Junehwa Song, Insik Shin  
     Proceedings of the 16th ACM International Conference on Ubiquitous Computing (UbiComp), Seattle, Washington, US, September 2014.
@@ -79,7 +83,7 @@ date: 2026-06-04T19:02:02+09:00
 
 - **A Study on Security Vulnerability Analysis and Attack Practice of GraphQL API**  
    Dongyoon Lee, Jihwan Park, Yeonwoo Sea, Hyunjoong Kim, Jiyeon Lee  
-   To appear in *The Transactions of the Korea Information Processing Society*, July 2026.
+   *The Transactions of the Korea Information Processing Society*, Vol.15, No.7, pp.628-635, July 2026.
 
 - **A Study on the Development and Application of an Integrated External Risk Assessment System Specialized for the Financial Domain**  
    Wongi Lee, Jeongsoo Jang, Jinho Choi, Jinling Wang, Jihwan Park, Yeonwoo Sea, Jiyeon Lee, Dongkyun Kim  
@@ -112,10 +116,6 @@ date: 2026-06-04T19:02:02+09:00
 - **Parallel Task Multi-core Scheduling for Real-Time Cyber-Physical Systems**  
    Jiyeon Lee, Insik Shin  
    *Telecommunications Review*, August 2015.
-
-- **Real-time Audio Coordination Framework for Immersive Sound Reproduction**  
-   Hyosu Kim, Jiyeon Lee, Hwidong Bae, Insik Shin  
-   Demo session of the 35th IEEE Real-Time Systems Symposium (RTSS@Work), Rome, Italy, December 2014.
 
 - <span class="pub-badge award">Best Paper Award</span> **GPGPU Parallelization Techniques for Redundancy Elimination Algorithm**  
    Byunggill Joe, Dae R. Jeong, Jiyeon Lee, Insik Shin  
