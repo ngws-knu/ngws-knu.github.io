@@ -5,10 +5,12 @@ title: "Publications"
 ## International Conference and Journal Papers
 
 ### 2026
-
+- **What Can Commodity Devices Prove about Physical Presence? Contextual Evidence via Verifier-Controlled Displays**  
+   Jihwan Park, Jiyeon Lee  
+   To appear in *Proceedings of The 33rd ACM Conference on Computer and Communications Security (CCS) Poster*, Hague, Netherlands, November 2026.
 
 - <span class="pub-badge q1">Q1</span> **Pinching Antenna Relaying Systems with Hardware Impairments**  
-   Yunhao Ding, Wei Duan, Guoping Lu, Jiyeon Lee, Limei Peng, Pin-Han Ho,  
+   Yunhao Ding, Wei Duan, Guoping Lu, Jiyeon Lee, Limei Peng, Pin-Han Ho  
    To appear in *IEEE Internet of Things Journal*, August 2026.
 
 - <span class="pub-badge q1">Q1</span> **Low-Complexity Scheme for HRIS Construction Optimization under Overall Power Constraint**  

@@ -102,6 +102,15 @@ title: "Team"
 <p class="person-detail">🎓 CSE @ KNU</p>
 </div>
 </article>
+<article class="person-card">
+<img src="/images/team/hyunmin-profile.jpg" alt="Hyunmin Kim profile photo">
+<div class="person-info">
+<p class="person-heading"><a class="person-name" href="#">Hyunmin Kim</a> <a class="person-link" href="#" aria-label="Hyunmin Kim homepage">🔗</a></p>
+<p class="person-role">Research Intern | Summer 2026</p>
+<p class="person-email">hm030740@gmail.com</p>
+<p class="person-detail">🎓 CSE @ KNU</p>
+</div>
+</article>
 </div>
 </section>
 
