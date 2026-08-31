@@ -10,9 +10,12 @@ title: "News"
 <section class="news-year">
 <h2>2026</h2>
 <div class="news-list">
+<article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>💼 NGWS was selected for an NRF Basic Research Program project.</h3></div></article>
+<article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>📄 Two journal papers and one poster were accepted for publication.</h3></div></article>
 <article class="news-event"><div class="news-date">July</div><div class="news-body"><h3>☕ We enjoyed a fika together. <a class="news-photo-tag" href="#photo-fika" data-photo-target="photo-fika">Photo</a></h3></div></article>
+<article class="news-event"><div class="news-date">July</div><div class="news-body"><h3>📄 Our paper was accepted to <em>IEEE Transactions on Communications</em>.</h3></div></article>
 <article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>🚀 We launched the new NGWS website.</h3></div></article>
-<article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>🌱 Junwoo joined NGWS. Welcome aboard!</h3></div></article>
+<article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>🌱 Junwoo and Hyunmin joined NGWS. Welcome aboard!</h3></div></article>
 <article class="news-event"><div class="news-date">Jun</div><div class="news-body"><h3>📄 Our paper was accepted to <em>IEEE Transactions on Consumer Electronics</em>.</h3></div></article>
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>💼 NGWS was selected for a More Action Individual Stepping-stone Project.</h3></div></article>
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>🎓 Yeonhak successfully defended his master's thesis.</h3></div></article>
@@ -21,7 +24,7 @@ title: "News"
 <article class="news-event"><div class="news-date">Apr</div><div class="news-body"><h3>🧩 We finalized the NGWS lab logo. <a class="news-photo-tag" href="#photo-lab-logo" data-photo-target="photo-lab-logo">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">Mar</div><div class="news-body"><h3>📄 Our paper was accepted to <em>IEEE Access</em>.</h3></div></article>
 <article class="news-event"><div class="news-date">Feb</div><div class="news-body"><h3>🎓 Yeonwoo graduated as the representative of the IT College, began the master's program, and was selected as a BK scholar. <a class="news-photo-tag" href="#photo-graduation" data-photo-target="photo-graduation">Photo</a></h3></div></article>
-<article class="news-event"><div class="news-date">Jan</div><div class="news-body"><h3>🌱 Hyunjoong joined NGWS. Welcome!</h3></div></article>
+<article class="news-event"><div class="news-date">Jan</div><div class="news-body"><h3>🌱 Hyunjung joined NGWS. Welcome!</h3></div></article>
 </div>
 </section>
 
