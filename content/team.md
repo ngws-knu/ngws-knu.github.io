@@ -91,6 +91,7 @@ title: "Team"
 <p class="person-role">Research Intern | Spring 2026</p>
 <p class="person-email">djh05099@gmail.com</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
+<p class="person-detail">🔬 URP</p>
 </div>
 </article>
 <article class="person-card">

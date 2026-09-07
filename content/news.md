@@ -10,6 +10,7 @@ title: "News"
 <section class="news-year">
 <h2>2026</h2>
 <div class="news-list">
+<article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>💼 Jihwan was selected for an NRF Master's Student Research Fellowship.<a class="news-photo-tag" href="#photo-jihwan-fellowship" data-photo-target="photo-jihwan-fellowship">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>💼 NGWS was selected for an NRF Basic Research Program project.</h3></div></article>
 <article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>📄 Two journal papers and one poster were accepted for publication.</h3></div></article>
 <article class="news-event"><div class="news-date">July</div><div class="news-body"><h3>☕ We enjoyed several insightful seminars and fika sessions together. <br><a class="news-photo-tag" href="#photo-fika1" data-photo-target="photo-fika1">Photo1</a><a class="news-photo-tag" href="#photo-lab-seminar" data-photo-target="photo-lab-seminar">Photo2</a><a class="news-photo-tag" href="#photo-fika2" data-photo-target="photo-fika2">Photo3</a></h3></div></article>
@@ -80,6 +81,7 @@ title: "News"
 
 <aside class="news-moments" aria-label="Lab moments">
 <h2>Lab Moments</h2>
+<figure id="photo-jihwan-fellowship"><img src="/images/news/260903-jihwan-fellowship.jpg" alt="Jihwan Research Fellowship"></figure>
 <figure id="photo-fika2"><img src="/images/news/260828-fika.jpg" alt="NGWS fika gathering"></figure>
 <figure id="photo-lab-seminar"><img src="/images/news/260731-seminar.png" alt="NGWS fika gathering"></figure>
 <figure id="photo-fika1"><img src="/images/news/260626-fika.jpg" alt="NGWS fika gathering"></figure>
