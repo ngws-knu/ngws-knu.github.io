@@ -17,7 +17,7 @@ title: "Home"
     <div class="swiper lab-photo-swiper" aria-label="NGWS lab photo carousel">
       <div class="swiper-wrapper">
         <div class="swiper-slide is-active">
-          <img src="/images/lab-photo-t.png" alt="NGWS lab overview slide">
+          <img src="/images/lab-photo-back.png" alt="NGWS lab overview slide">
         </div>
         <div class="swiper-slide">
           <img src="/images/lab-photo-openlab.jpg" alt="NGWS open lab group photo">
@@ -27,9 +27,6 @@ title: "Home"
         </div>
         <div class="swiper-slide">
           <img src="/images/lab-photo-teachers-day.jpg" alt="NGWS Teacher's Day gathering">
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/lab-photo-year-end.jpg" alt="NGWS year-end dinner">
         </div>
       </div>
       <div class="swiper-pagination" aria-label="Lab photo pagination"></div>
