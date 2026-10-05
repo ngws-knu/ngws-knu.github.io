@@ -112,7 +112,7 @@ title: "Team"
 </div>
 </article>
 <article class="person-card">
-<img src="/images/team/iwan-profile.jpg" alt="Iwan Choi profile photo">
+<div class="person-photo-iwan"><img src="/images/team/iwan-profile.jpg" alt="Iwan Choi profile photo"></div>
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Iwan Choi</a> <a class="person-link" href="#" aria-label="Iwan Choi homepage">🔗</a></p>
 <p class="person-role">Research Intern | Fall 2026</p>

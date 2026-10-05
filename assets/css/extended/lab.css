@@ -543,6 +543,26 @@ html[data-theme="dark"] .logo-image-dark {
   border: 1px solid var(--border);
 }
 
+.person-photo-iwan {
+  box-sizing: border-box;
+  width: 124px;
+  height: 124px;
+  margin: 0 auto 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background-color: #c9c2ab;
+}
+
+.person-card .person-photo-iwan img {
+  width: calc(100% - 24px);
+  height: 100%;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+}
+
 .person-info {
   display: flex;
   flex: 1;
