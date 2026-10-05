@@ -58,6 +58,16 @@ title: "Team"
 <p class="person-detail">🌏 GKS Scholar</p>
 </div>
 </article>
+<article class="person-card">
+<img src="/images/team/dongyoon-profile.jpg" alt="Dongyoon Lee profile photo">
+<div class="person-info">
+<p class="person-heading"><a class="person-name" href="#">Dongyoon Lee</a> <a class="person-link" href="#" aria-label="Dongyoon Lee homepage">🔗</a></p>
+<p class="person-role">B.S.-M.S. Integrated | Spring 2026</p>
+<p class="person-email">sub09065@gmail.com</p>
+<p class="person-detail">🎓 B.S. CSE @ KNU</p>
+<p class="person-detail">🏆 Junior BK21 Scholar</p>
+</div>
+</article>
 </div>
 </section>
 
@@ -65,23 +75,12 @@ title: "Team"
 <h2>Undergraduate Researchers</h2>
 <div class="people-grid">
 <article class="person-card">
-<img src="/images/team/dongyoon-profile.jpg" alt="Dongyoon Lee profile photo">
-<div class="person-info">
-<p class="person-heading"><a class="person-name" href="#">Dongyoon Lee</a> <a class="person-link" href="#" aria-label="Dongyoon Lee homepage">🔗</a></p>
-<p class="person-role">B.S.-M.S. Integrated | Spring 2026</p>
-<p class="person-email">sub09065@gmail.com</p>
-<p class="person-detail">🎓 CSE @ KNU</p>
-<p class="person-detail">🔬 URP</p>
-</div>
-</article>
-<article class="person-card">
 <img src="/images/team/sohyun-profile.jpg" alt="Sohyun Park profile photo">
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Sohyun Park</a> <a class="person-link" href="#" aria-label="Sohyun Park homepage">🔗</a></p>
 <p class="person-role">Research Intern | Spring 2026</p>
 <p class="person-email">studyhyeon1004@gmail.com</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
-<p class="person-detail">🔬 URP</p>
 </div>
 </article>
 <article class="person-card">
@@ -112,6 +111,17 @@ title: "Team"
 <p class="person-detail">🎓 CSE @ KNU</p>
 </div>
 </article>
+<article class="person-card">
+<img src="/images/team/iwan-profile.jpg" alt="Iwan Choi profile photo">
+<div class="person-info">
+<p class="person-heading"><a class="person-name" href="#">Iwan Choi</a> <a class="person-link" href="#" aria-label="Iwan Choi homepage">🔗</a></p>
+<p class="person-role">Research Intern | Fall 2026</p>
+<p class="person-email">ch030418@gmail.com</p>
+<p class="person-detail">🎓 GLL @ KNU</p>
+</div>
+</article>
+</div>
+</section>
 </div>
 </section>
 

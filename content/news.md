@@ -42,9 +42,9 @@ title: "News"
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>🎤 Yeonwoo presented at ASK 2025 in Daegu. <a class="news-photo-tag" href="#photo-ask25" data-photo-target="photo-ask25">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">May</div><div class="news-body"><h3>📄 Two papers were accepted to <em>Transactions of the Korea Information Processing Society</em>.</h3></div></article>
 <article class="news-event"><div class="news-date">Apr</div><div class="news-body"><h3>🏆 Jihwan was selected as a Junior BK Scholar.</h3></div></article>
-<article class="news-event"><div class="news-date">Mar</div><div class="news-body"><h3>🌱 Yoonji and Jaehong joined NGWS. Welcome!</h3></div></article>
+<article class="news-event"><div class="news-date">Mar</div><div class="news-body"><h3>🌱 Yunji and Jaehong joined NGWS. Welcome!</h3></div></article>
 <article class="news-event"><div class="news-date">Feb</div><div class="news-body"><h3>💼 NGWS was selected for a Dongil Cultural Foundation academic research grant.</h3></div></article>
-<article class="news-event"><div class="news-date">Jan</div><div class="news-body"><h3>🔬 Seungjong, Hojin, Yoonji, and Jaehong participated in the undergraduate winter research program.</h3></div></article>
+<article class="news-event"><div class="news-date">Jan</div><div class="news-body"><h3>🔬 Seungjong, Hojin, Yunji, and Jaehong participated in the undergraduate winter research program.</h3></div></article>
 </div>
 </section>
 
