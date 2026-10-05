@@ -53,7 +53,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Stéfany Coura Coimbra</a> <a class="person-link" href="#" aria-label="Stefany Coura Coimbra homepage">🔗</a></p>
 <p class="person-role">M.S. Student | Fall 2026</p>
-<p class="person-email">stefany.ccoimbra@gmail.com</p>
+<p class="person-email">stercoura@knu.ac.kr</p>
 <p class="person-detail">🎓 B.S. CSE @ UNIFEI</p>
 <p class="person-detail">🌏 GKS Scholar</p>
 </div>
@@ -63,7 +63,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Dongyoon Lee</a> <a class="person-link" href="#" aria-label="Dongyoon Lee homepage">🔗</a></p>
 <p class="person-role">B.S.-M.S. Integrated | Spring 2026</p>
-<p class="person-email">sub09065@gmail.com</p>
+<p class="person-email">sub09065@knu.ac.kr</p>
 <p class="person-detail">🎓 B.S. CSE @ KNU</p>
 <p class="person-detail">🏆 Junior BK21 Scholar</p>
 </div>
@@ -79,7 +79,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Sohyun Park</a> <a class="person-link" href="#" aria-label="Sohyun Park homepage">🔗</a></p>
 <p class="person-role">Research Intern | Spring 2026</p>
-<p class="person-email">studyhyeon1004@gmail.com</p>
+<p class="person-email">psh0826@knu.ac.kr</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
 </div>
 </article>
