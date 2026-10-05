@@ -561,6 +561,7 @@ html[data-theme="dark"] .logo-image-dark {
   border: 0;
   border-radius: 0;
   object-fit: cover;
+  filter: brightness(1.35);
 }
 
 .person-info {
