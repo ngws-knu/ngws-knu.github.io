@@ -84,11 +84,11 @@ title: "Team"
 </div>
 </article>
 <article class="person-card">
-<img src="/images/team/hyunjoong-profile.jpg" alt="Hyunjoong Kim profile photo">
+<img src="/images/team/hyunjung-profile.jpg" alt="Hyunjung Kim profile photo">
 <div class="person-info">
-<p class="person-heading"><a class="person-name" href="#">Hyunjung Kim</a> <a class="person-link" href="#" aria-label="Hyunjoong Kim homepage">🔗</a></p>
+<p class="person-heading"><a class="person-name" href="#">Hyunjung Kim</a> <a class="person-link" href="#" aria-label="Hyunjung Kim homepage">🔗</a></p>
 <p class="person-role">Research Intern | Spring 2026</p>
-<p class="person-email">djh05099@gmail.com</p>
+<p class="person-email">djh05099@knu.ac.kr</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
 <p class="person-detail">🔬 URP</p>
 </div>
@@ -98,7 +98,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Junwoo Nam</a> <a class="person-link" href="#" aria-label="Junwoo Nam homepage">🔗</a></p>
 <p class="person-role">Research Intern | Summer 2026</p>
-<p class="person-email">joonwoo1112@gmail.com</p>
+<p class="person-email">jw061112@knu.ac.kr</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
 </div>
 </article>
@@ -107,7 +107,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Hyunmin Kim</a> <a class="person-link" href="#" aria-label="Hyunmin Kim homepage">🔗</a></p>
 <p class="person-role">Research Intern | Summer 2026</p>
-<p class="person-email">hm030740@gmail.com</p>
+<p class="person-email">hm030740@knu.ac.kr</p>
 <p class="person-detail">🎓 CSE @ KNU</p>
 </div>
 </article>
@@ -116,7 +116,7 @@ title: "Team"
 <div class="person-info">
 <p class="person-heading"><a class="person-name" href="#">Iwan Choi</a> <a class="person-link" href="#" aria-label="Iwan Choi homepage">🔗</a></p>
 <p class="person-role">Research Intern | Fall 2026</p>
-<p class="person-email">ch030418@gmail.com</p>
+<p class="person-email">xdoze0418@knu.ac.kr</p>
 <p class="person-detail">🎓 GLL @ KNU</p>
 </div>
 </article>
