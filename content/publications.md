@@ -5,6 +5,10 @@ title: "Publications"
 ## International Conference and Journal Papers
 
 ### 2026
+- **VR-Sniffer: WebVR Browsing History Sniffing Attack by Exploiting Controller Input Leakage**  
+   Jiyeon Lee, Byunggil Joe, Kilho Lee  
+   To appear in *IET Information Security*, November 2026.
+
 - **What Can Commodity Devices Prove about Physical Presence? Contextual Evidence via Verifier-Controlled Displays**  
    Jihwan Park, Jiyeon Lee  
    To appear in *Proceedings of The 33rd ACM Conference on Computer and Communications Security (CCS) Poster*, Hague, Netherlands, November 2026.
