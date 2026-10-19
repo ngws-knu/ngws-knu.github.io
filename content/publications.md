@@ -7,7 +7,7 @@ title: "Publications"
 ### 2026
 - **VR-Sniffer: WebVR Browsing History Sniffing Attack by Exploiting Controller Input Leakage**  
    Jiyeon Lee, Byunggil Joe, Kilho Lee  
-   To appear in *IET Information Security*, November 2026.
+   To appear in *IET Information Security*, 2026.
 
 - **What Can Commodity Devices Prove about Physical Presence? Contextual Evidence via Verifier-Controlled Displays**  
    Jihwan Park, Jiyeon Lee  
@@ -15,19 +15,19 @@ title: "Publications"
 
 - <span class="pub-badge q1">Q1</span> **Pinching Antenna Relaying Systems with Hardware Impairments**  
    Yunhao Ding, Wei Duan, Guoping Lu, Jiyeon Lee, Limei Peng, Pin-Han Ho  
-   To appear in *IEEE Internet of Things Journal*, August 2026.
+   To appear in *IEEE Internet of Things Journal*, 2026.
 
 - <span class="pub-badge q1">Q1</span> **Low-Complexity Scheme for HRIS Construction Optimization under Overall Power Constraint**  
    Wei Duan, Wenjun Jiao, Guoan Zhang, Jiyeon Lee, Limei Peng, Pin-Han Ho  
-   To appear in *IEEE Transactions on Vehicular Technology*, August 2026.
+   To appear in *IEEE Transactions on Vehicular Technology*, 2026.
+
+- <span class="pub-badge q1">Q1</span> **Optimizing Consumer Task Offloading in Dynamic SAGINs with Collaborative LLM Agents**  
+   Ke Zhao, Jiang Mo, Limei Peng, Jiyeon Lee  
+   To appear in *IEEE Transactions on Consumer Electronics*, 2026.
 
 - <span class="pub-badge q1">Q1</span> **Beyond Time-Expanded Graphs: Novel Continuous-Time Graphs for SAGINs**  
    Ke Zhao, Limei Peng, Jiyeon Lee, and Hsiao-Chun Wu  
    *IEEE Transactions on Communications*, July 2026.
-
-- <span class="pub-badge q1">Q1</span> **Optimizing Consumer Task Offloading in Dynamic SAGINs with Collaborative LLM Agents**  
-   Ke Zhao, Jiang Mo, Limei Peng, Jiyeon Lee  
-   *IEEE Transactions on Consumer Electronics*, June 2026.
 
 - <span class="pub-badge q2">Q2</span> **Acoustic Signal-Based Smart Attendance System for Preventing Fraudulent Attendees**  
    Yeonwoo Sea, Jihwan Park, Yunji Ha, Sihyung Lee, Jiyeon Lee  
@@ -99,7 +99,7 @@ title: "Publications"
 
 ### Domestic and Technical Papers
 
-- **A Study on Security Vulnerability Analysis and Attack Practice of GraphQL API**  
+- <span class="pub-badge kci">KCI</span> **A Study on Security Vulnerability Analysis and Attack Practice of GraphQL API**  
    Dongyoon Lee, Jihwan Park, Yeonwoo Sea, Hyunjoong Kim, Jiyeon Lee  
    *The Transactions of the Korea Information Processing Society*, Vol.15, No.7, pp.628-635, July 2026.
 
@@ -111,19 +111,23 @@ title: "Publications"
    Yujun Kim, Useong Gwon, Seungsoo Oh, Seunghyun Kwak, Yunseong Moon, Yeonhak Kim, Jiyeon Lee  
    *Proceedings of KIIT Conference*, November 2025.
 
-- **Backdoor Attacks on Generative Language Models in Disaster Situations: Attack Scenarios and Empirical Analysis**  
+- <span class="pub-badge kci">KCI</span> **Backdoor Attacks on Generative Language Models in Disaster Situations: Attack Scenarios and Empirical Analysis**  
    Jongyoung Kang, Jiyeon Lee  
    *The Transactions of the Korea Information Processing Society*, Vol. 14, No. 7, pp. 533-541, July 2025.
 
-- **Sound Signal-based Attendance System for Preventing Unauthorized Attendance**  
+- **An Attendance Fraud Prevention System Using Video Frame-Based Random Code Matching**  
+   Yeonhak Kim, Yeonwoo Sea, Jongyoung Kang, Jiyeon Lee  
+   *Proceedings of the Korea Computer Congress (KCC)*, Jeju, South Korea, July 2025.
+
+- <span class="pub-badge kci">KCI</span> **Sound Signal-based Attendance System for Preventing Unauthorized Attendance**  
    Yeonwoo Sea, Jihwan Park, Dayeong Kang, Jiyeon Lee  
    *The Transactions of the Korea Information Processing Society*, Vol. 14, No. 5, pp. 305-311, May 2025.
 
-- **Enhancing Container Security Using Machine Learning Based on Kernel Tracing Logs**  
+- <span class="pub-badge kci">KCI</span> **Enhancing Container Security Using Machine Learning Based on Kernel Tracing Logs**  
    Hyeonseok Shin, Minjung Jo, Hosang Yoo, Yongwon Lee, Jiyeon Lee, Byungchul Tak  
    *Journal of KIISE*, Vol. 51, No. 11, pp. 947-960, November 2024.
 
-- **Analysis of Security Vulnerabilities and Personal Information Exposure Risks in Overleaf**  
+- <span class="pub-badge kci">KCI</span> **Analysis of Security Vulnerabilities and Personal Information Exposure Risks in Overleaf**  
    Suzi Kim, Jiyeon Lee  
    *Journal of the Korea Society of Computer and Information*, Vol. 29, No. 7, pp. 109-115, July 2024.
 
@@ -147,7 +151,7 @@ title: "Publications"
     Sangeun Oh, Jiyeon Lee, Kilho Lee, Insik Shin  
     *Technical Report, School of Computing, KAIST*, CS-TR-2014-387, August 2014.
 
-- **A Survey on Real-time Support for Mixed-criticality Cyber-Physical Systems**  
+- <span class="pub-badge kci">KCI</span> **A Survey on Real-time Support for Mixed-criticality Cyber-Physical Systems**  
     Jaewoo Lee, Jiyeon Lee, Insik Shin  
     *Korea Information Science Society*, Vol. 31, No. 12, December 2013.
 

@@ -1031,6 +1031,12 @@ html[data-theme="dark"] .logo-image-dark {
   border: 1px solid rgba(139, 92, 246, 0.34);
 }
 
+.pub-badge.kci {
+  color: #115e59;
+  background: #f0fdfa;
+  border: 1px solid #5eead4;
+}
+
 html[data-theme="dark"] .pub-badge.award {
   color: #fef3c7;
   background: rgba(251, 191, 36, 0.16);
@@ -1053,6 +1059,12 @@ html[data-theme="dark"] .pub-badge.q1 {
   color: #bbf7d0;
   background: rgba(34, 197, 94, 0.16);
   border-color: rgba(134, 239, 172, 0.44);
+}
+
+html[data-theme="dark"] .pub-badge.kci {
+  color: #99f6e4;
+  background: rgba(20, 184, 166, 0.16);
+  border-color: rgba(94, 234, 212, 0.44);
 }
 
 @media (max-width: 760px) {
