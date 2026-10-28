@@ -20,7 +20,7 @@ title: "Home"
           <img src="/images/lab-photo-t.png" alt="NGWS lab overview slide">
         </div>
         <div class="swiper-slide">
-          <img src="/images/lab-photo-openlab.jpg" alt="NGWS open lab group photo">
+          <img src="/images/lab-photo-openlab.png" alt="NGWS open lab group photo">
         </div>
         <div class="swiper-slide">
           <img src="/images/lab-photo-baseball.jpg" alt="NGWS members at a baseball game">
