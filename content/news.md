@@ -10,6 +10,7 @@ title: "News"
 <section class="news-year">
 <h2>2026</h2>
 <div class="news-list">
+<article class="news-event"><div class="news-date">Oct</div><div class="news-body"><h3>📄 Our paper was accepted to <em>IET Information Security</em>.</h3></div></article>
 <article class="news-event"><div class="news-date">Sep</div><div class="news-body"><h3>🌱 Iwan joined NGWS. Welcome!</h3></div></article>
 <article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>💼 Jihwan was selected for an NRF Master's Student Research Fellowship.<a class="news-photo-tag" href="#photo-jihwan-fellowship" data-photo-target="photo-jihwan-fellowship">Photo</a></h3></div></article>
 <article class="news-event"><div class="news-date">Aug</div><div class="news-body"><h3>💼 NGWS was selected for an NRF Basic Research Program project.</h3></div></article>
